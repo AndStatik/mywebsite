@@ -3,14 +3,16 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import MenuIcon from '../../public/MenuIcon.svg'
 
-const Navbar = () => (
-  // const [open, setOpen] = useState(false);
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
+  return (
     <nav className='navbar'>
       <ul className='navbar-nav'>
         <li className='nav-item'>
           <a href='#' className='icon-button' onClick={() => setOpen(!open)}>
             <MenuIcon />
           </a>
+          {open && <p>Hi!</p>}
         </li>
         {/* <li className='nav-item'><Link to="/">Home</Link></li>
         <li className='nav-item'><Link to="/about">About Me</Link></li>
@@ -20,7 +22,9 @@ const Navbar = () => (
         <li className='nav-item'><Link to="/contact">Contact</Link></li> */}
       </ul>
     </nav>
-)
+  )
+}
+
 
 /**
  * CONTAINER
