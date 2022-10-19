@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import MenuIcon from '../../public/MenuIcon.svg'
+import ArrRight from '../../public/ArrRight.svg'
+
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -12,7 +14,13 @@ const Navbar = () => {
           <a href='#' className='icon-button' onClick={() => setOpen(!open)}>
             <MenuIcon />
           </a>
-          {open && <p>Hi!</p>}
+          {open && <div className='dropdown'>
+              <a href='#' className='menu-item'>
+                <span className='icon-button'>LIcon</span>
+                Option
+                <span className='icon-right'><ArrRight /></span>
+              </a>
+            </div>}
         </li>
         {/* <li className='nav-item'><Link to="/">Home</Link></li>
         <li className='nav-item'><Link to="/about">About Me</Link></li>
