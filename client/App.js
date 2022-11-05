@@ -5,6 +5,7 @@ import { darkTheme, lightTheme } from "./styles/theme";
 // import Routes from "./Routes";
 import { GlobalStyle } from "./styles/globalStyles";
 import Layout from "./components/Layout/Layout";
+import { Helmet } from "react-helmet";
 
 export const ThemeContext = React.createContext(null);
 
