@@ -1,30 +1,17 @@
-import React, {Component, Fragment} from 'react'
+import React from 'react'
 import {connect} from 'react-redux'
-import {withRouter, Route, Switch, Redirect} from 'react-router-dom'
-import Home from './components/Home';
+import {Route, Switch, Redirect} from 'react-router-dom'
+import HomePage from './components/Pages/HomePage';
 
-/**
- * COMPONENT
- */
-class Routes extends Component {
-
-  render() {
-    return (
-      <div>
-        {(
-          <Switch>
-            <Route path="/" component={Home} />
-            <Redirect to="/" />
-          </Switch>
-        )}
-      </div>
-    )
-  }
+const Routes = () => {
+  return (
+    <Switch>
+      <Route exact path="/" component={HomePage} />
+      <Redirect to="/" />
+    </Switch>
+  )
 }
 
-/**
- * CONTAINER
- */
 const mapState = state => {
   return {
   }
@@ -35,6 +22,4 @@ const mapDispatch = dispatch => {
   }
 }
 
-// The `withRouter` wrapper makes sure that updates are not blocked
-// when the url changes
-export default withRouter(connect(mapState, mapDispatch)(Routes))
+export default connect(mapState, mapDispatch)(Routes)
