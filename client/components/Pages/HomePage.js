@@ -4,11 +4,11 @@ import {connect} from 'react-redux'
 /**
  * COMPONENT
  */
-export const Home = props => {
+export const HomePage = props => {
 
   return (
     <div>
-      <h3>Welcome!</h3>
+      <h1>Home Page</h1>
     </div>
   )
 }
@@ -21,4 +21,4 @@ const mapState = state => {
   }
 }
 
-export default connect(mapState)(Home)
+export default HomePage;

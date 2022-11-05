@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "./styles/theme";
 // import Navbar from "./components/Navbar";
-// import Routes from "./Routes";
+import Routes from "./Routes";
 import { GlobalStyle } from "./styles/globalStyles";
 import Layout from "./components/Layout/Layout";
 import { Helmet } from "react-helmet";
@@ -19,7 +19,7 @@ const App = () => {
       <ThemeProvider theme={themeStyle}>
         <GlobalStyle />
         <Helmet>
-          <title>Andrey</title>
+          <title>Andrey Statkevskiy - Personal Website</title>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
           <link
@@ -28,10 +28,11 @@ const App = () => {
           />
         </Helmet>
         <>
-          <Layout>test</Layout>
+          <Layout>
+            <Routes />
+          </Layout>
         </>
-        {/* <Navbar />
-        <Routes /> */}
+        {/* <Navbar /> */}
       </ThemeProvider>
     </ThemeContext.Provider>
   );
