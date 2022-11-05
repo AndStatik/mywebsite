@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "./styles/theme";
-import Navbar from "./components/Navbar";
-import Routes from "./Routes";
+// import Navbar from "./components/Navbar";
+// import Routes from "./Routes";
 import { GlobalStyle } from "./styles/globalStyles";
+import Layout from "./components/Layout/Layout";
 
 export const ThemeContext = React.createContext(null);
 
@@ -25,11 +26,13 @@ const App = () => {
             rel="stylesheet"
           />
         </Helmet>
-        <Navbar />
-        <Routes />
+        <>
+          <Layout>test</Layout>
+        </>
+        {/* <Navbar />
+        <Routes /> */}
       </ThemeProvider>
-    </ThemeContext>
-
+    </ThemeContext.Provider>
   );
 };
 
