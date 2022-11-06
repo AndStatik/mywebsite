@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useRef } from "react";
 import {
   SDivider,
   SLink,
@@ -26,10 +26,21 @@ import {
 import { MdLogout, MdOutlineAnalytics } from "react-icons/md";
 import { BsPeople } from "react-icons/bs";
 import { ThemeContext } from "./../../App";
+import { useLocation } from "react-router-dom";
 
 const Sidebar = () => {
+  const searchRef = useRef(null);
   const { setTheme, theme } = useContext(ThemeContext);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const { pathname } = useLocation();
+  const searchClickHandler = () => {
+    if (!sidebarOpen) {
+      setSidebarOpen(true);
+      searchRef.current.focus();
+    } else {
+      //search functionality
+    }
+  }
   return (
     <SSidebar isOpen={sidebarOpen}>
       <>
@@ -43,18 +54,19 @@ const Sidebar = () => {
       <SLogo isOpen={sidebarOpen}>
         <img src="https://i.ibb.co/tDWQ789/logo.png" alt="logo" />
       </SLogo>
-      <SSearch style={!sidebarOpen ? { width: "fit-content" } : {}}>
+      <SSearch onClick={searchClickHandler} style={!sidebarOpen ? { width: "fit-content" } : {}}>
         <SSearchIcon>
           <AiOutlineSearch />
         </SSearchIcon>
         <input
+          ref={searchRef}
           placeholder="Search"
           style={!sidebarOpen ? { width: 0, padding: 0 } : {}}
         />
       </SSearch>
       <SDivider />
       {linksArray.map(({ icon, label, notification, to }) => (
-        <SLinkContainer key={label}>
+        <SLinkContainer key={label} isActive={pathname === to}>
           <SLink to={to} style={!sidebarOpen ? { width: "fit-content" } : {}}>
             <SLinkIcon>{icon}</SLinkIcon>
             {sidebarOpen && (
@@ -71,7 +83,7 @@ const Sidebar = () => {
       <SDivider />
       {secondaryLinksArray.map(({ icon, label }) => (
         <SLinkContainer key={label}>
-          <SLink to="/" style={!sidebarOpen ? {width: 'fit-content'} : {}}>
+          <SLink to="/" style={!sidebarOpen ? { width: "fit-content" } : {}}>
             <SLinkIcon>{icon}</SLinkIcon>
             {sidebarOpen && <SLinkLabel>{label}</SLinkLabel>}
           </SLink>
