@@ -52,7 +52,7 @@ const Sidebar = () => {
         </SSidebarButton>
       </>
       <SLogo isOpen={sidebarOpen}>
-        <img src="https://i.ibb.co/tDWQ789/logo.png" alt="logo" />
+        <img src="https://i.ibb.co/NWvWNB8/logo1.png" alt="logo" />
       </SLogo>
       <SSearch onClick={searchClickHandler} style={!sidebarOpen ? { width: "fit-content" } : {}}>
         <SSearchIcon>
