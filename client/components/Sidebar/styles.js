@@ -8,6 +8,9 @@ export const SSidebar = styled.div`
   height: ${({isOpen}) => !isOpen ? '100vh' : '100%'};
   padding: ${v.lgSpacing};
   position: relative;
+  @media (max-width: 401px) {
+    display: none;
+  }
 `;
 
 export const SSidebarButton = styled.button`
