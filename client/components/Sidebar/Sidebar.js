@@ -17,21 +17,26 @@ import {
   SToggleThumb,
 } from "./styles";
 import {
-  AiOutlineApartment,
+  AiOutlineInfoCircle,
   AiOutlineHome,
   AiOutlineLeft,
   AiOutlineSearch,
   AiOutlineSetting,
+  AiOutlineInstagram,
+  AiOutlineGithub,
+  AiOutlineYoutube,
+  AiOutlineLinkedin,
 } from "react-icons/ai";
-import { MdLogout, MdOutlineAnalytics } from "react-icons/md";
-import { BsPeople } from "react-icons/bs";
+import { MdOutlineNightlight } from "react-icons/md";
+import { GrContactInfo } from "react-icons/gr";
+import { ImLab } from "react-icons/im";
 import { ThemeContext } from "./../../App";
 import { useLocation } from "react-router-dom";
 
 const Sidebar = () => {
   const searchRef = useRef(null);
-  const { setTheme, theme } = useContext(ThemeContext);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const { setTheme, theme } = useContext(ThemeContext);
   const { pathname } = useLocation();
   const searchClickHandler = () => {
     if (!sidebarOpen) {
@@ -40,7 +45,7 @@ const Sidebar = () => {
     } else {
       //search functionality
     }
-  }
+  };
   return (
     <SSidebar isOpen={sidebarOpen}>
       <>
@@ -54,7 +59,10 @@ const Sidebar = () => {
       <SLogo isOpen={sidebarOpen}>
         <img src="https://i.ibb.co/NWvWNB8/logo1.png" alt="logo" />
       </SLogo>
-      <SSearch onClick={searchClickHandler} style={!sidebarOpen ? { width: "fit-content" } : {}}>
+      <SSearch
+        onClick={searchClickHandler}
+        style={!sidebarOpen ? { width: "fit-content" } : {}}
+      >
         <SSearchIcon>
           <AiOutlineSearch />
         </SSearchIcon>
@@ -89,16 +97,35 @@ const Sidebar = () => {
           </SLink>
         </SLinkContainer>
       ))}
-      <SDivider />
       <STheme>
-        {sidebarOpen && <SThemeLabel>Dark Theme</SThemeLabel>}
-        <SThemeToggler
-          isActive={theme === "dark"}
-          onClick={() => setTheme((p) => (p === "light" ? "dark" : "light"))}
-        >
-          <SToggleThumb style={theme === "dark" ? { right: "1px" } : {}} />
-        </SThemeToggler>
+        <SLinkContainer key={"Dark Theme"}>
+          <SLink to="/" style={!sidebarOpen ? { width: "fit-content" } : {}}>
+            <SLinkIcon>
+              <MdOutlineNightlight />
+            </SLinkIcon>
+            {sidebarOpen && <SLinkLabel>Dark Theme</SLinkLabel>}
+          </SLink>
+        </SLinkContainer>
+        {sidebarOpen && (
+          <SThemeToggler
+            isActive={theme === "dark"}
+            onClick={() => setTheme((p) => (p === "light" ? "dark" : "light"))}
+          >
+            <SToggleThumb style={theme === "dark" ? { right: "1px" } : {}} />
+          </SThemeToggler>
+        )}
       </STheme>
+      <SDivider />
+      <SLinkContainer>
+        <div id="sns">
+          {sidebarOpen &&
+            thirdLinksArray.map(({ icon, label, to }) => (
+              <a href={to} key={label}>
+                <SLinkIcon>{icon}</SLinkIcon>
+              </a>
+            ))}
+        </div>
+      </SLinkContainer>
     </SSidebar>
   );
 };
@@ -112,19 +139,19 @@ const linksArray = [
   },
   {
     label: "Projects",
-    icon: <MdOutlineAnalytics />,
+    icon: <ImLab />,
     to: "/projects",
     notification: 3,
   },
   {
     label: "About Me",
-    icon: <BsPeople />,
+    icon: <AiOutlineInfoCircle />,
     to: "/about",
     notification: 0,
   },
   {
     label: "Contact Me",
-    icon: <AiOutlineApartment />,
+    icon: <GrContactInfo />,
     to: "/contact",
     notification: 1,
   },
@@ -135,9 +162,28 @@ const secondaryLinksArray = [
     label: "Settings",
     icon: <AiOutlineSetting />,
   },
+];
+
+const thirdLinksArray = [
   {
-    label: "Logout",
-    icon: <MdLogout />,
+    label: "GitHub",
+    icon: <AiOutlineGithub />,
+    to: "https://github.com/AndStatik",
+  },
+  {
+    label: "LinkedIn",
+    icon: <AiOutlineLinkedin />,
+    to: "https://www.linkedin.com/in/andrey-statkevskiy/",
+  },
+  {
+    label: "Instagram",
+    icon: <AiOutlineInstagram />,
+    to: "https://www.instagram.com/andstatik/",
+  },
+  {
+    label: "YouTube",
+    icon: <AiOutlineYoutube />,
+    to: "https://www.youtube.com/@andstatik",
   },
 ];
 

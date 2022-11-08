@@ -82,6 +82,11 @@ export const SLinkContainer = styled.div`
     :hover {
         box-shadow: inset 0 0 0 1px ${({ theme }) => theme.bg3};
     }
+    #sns {
+      color: black;
+      display: flex;
+      justify-content: space-evenly;
+    }
 `;
 
 export const SLink = styled(Link)`
@@ -121,10 +126,10 @@ export const STheme = styled.div`
     align-items: center;
     font-size: 16px;
 `;
-export const SThemeLabel = styled.span`
-    display: block;
-    flex: 1;
-`;
+// export const SThemeLabel = styled.span`
+//     display: block;
+//     flex: 1;
+// `;
 export const SThemeToggler = styled.button`
     ${btnReset};
     margin: 0 auto;
