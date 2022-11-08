@@ -5,9 +5,12 @@ import { btnReset, v } from "../../styles/variables";
 export const SSidebar = styled.div`
   width: ${({isOpen}) => !isOpen ? 'auto' : v.sidebarWidth};
   background: ${({ theme }) => theme.bg};
-  height: 100vh;
+  height: ${({isOpen}) => !isOpen ? '100vh' : '100%'};
   padding: ${v.lgSpacing};
   position: relative;
+  @media (max-width: 401px) {
+    display: none;
+  }
 `;
 
 export const SSidebarButton = styled.button`
@@ -79,6 +82,11 @@ export const SLinkContainer = styled.div`
     :hover {
         box-shadow: inset 0 0 0 1px ${({ theme }) => theme.bg3};
     }
+    #sns {
+      color: black;
+      display: flex;
+      justify-content: space-evenly;
+    }
 `;
 
 export const SLink = styled(Link)`
@@ -118,10 +126,10 @@ export const STheme = styled.div`
     align-items: center;
     font-size: 16px;
 `;
-export const SThemeLabel = styled.span`
-    display: block;
-    flex: 1;
-`;
+// export const SThemeLabel = styled.span`
+//     display: block;
+//     flex: 1;
+// `;
 export const SThemeToggler = styled.button`
     ${btnReset};
     margin: 0 auto;
