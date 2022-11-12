@@ -23,7 +23,7 @@ import {
   AiOutlineSearch,
   AiOutlineSetting,
   AiOutlineInstagram,
-  AiOutlineGithub,
+  AiFillGithub,
   AiOutlineYoutube,
   AiOutlineLinkedin,
 } from "react-icons/ai";
@@ -120,7 +120,7 @@ const Sidebar = () => {
         <div id="sns">
           {sidebarOpen &&
             thirdLinksArray.map(({ icon, label, to }) => (
-              <a href={to} key={label}>
+              <a href={to} key={label} style={ theme === "dark" ? { color: "white" } : {color: "black"}}>
                 <SLinkIcon>{icon}</SLinkIcon>
               </a>
             ))}
@@ -167,7 +167,7 @@ const secondaryLinksArray = [
 const thirdLinksArray = [
   {
     label: "GitHub",
-    icon: <AiOutlineGithub />,
+    icon: <AiFillGithub />,
     to: "https://github.com/AndStatik",
   },
   {
