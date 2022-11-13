@@ -21,7 +21,8 @@ export const SSidebarButton = styled.button`
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: ${({ theme }) => theme.bg};
+    background: black;
+    color: white;
     box-shadow: 0 0 4px ${({ theme }) => theme.bg3}, 0 0 7px ${({ theme }) => theme.bg};
     display: flex;
     align-items: center;
@@ -33,11 +34,11 @@ export const SSidebarButton = styled.button`
 export const SLogo = styled.div`
   width: 52px;
   img {
-    max-width: ${({isOpen}) => !isOpen ? '52px' : '260px'};
+    max-width: ${({isOpen}) => !isOpen ? '52px' : '210px'};
     height: auto;
+    margin: ${({isOpen}) => !isOpen ? `0px 0px ${v.lgSpacing} 0px;` : `0px 0px ${v.lgSpacing} 20px;`};
   }
   cursor: pointer;
-  margin-bottom: ${v.lgSpacing};
 `;
 
 export const SSearch = styled.div`
@@ -72,7 +73,7 @@ export const SDivider = styled.div`
     height: 1px;
     width: 100%;
     background: ${({ theme }) => theme.bg3};
-    margin: ${v.lgSpacing} 0;
+    margin: 0;
 `;
 
 export const SLinkContainer = styled.div`
@@ -83,7 +84,6 @@ export const SLinkContainer = styled.div`
         box-shadow: inset 0 0 0 1px ${({ theme }) => theme.bg3};
     }
     #sns {
-      color: black;
       display: flex;
       justify-content: space-evenly;
     }
@@ -110,6 +110,9 @@ export const SLinkLabel = styled.span`
     display: block;
     flex: 1;
     margin-left: ${v.smSpacing};
+    #darkTheme {
+      margin-right: 35px;
+    }
 `;
 
 export const SLinkNotification = styled.div`

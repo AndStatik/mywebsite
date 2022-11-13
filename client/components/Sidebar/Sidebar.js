@@ -23,12 +23,12 @@ import {
   AiOutlineSearch,
   AiOutlineSetting,
   AiOutlineInstagram,
-  AiOutlineGithub,
+  AiFillGithub,
   AiOutlineYoutube,
   AiOutlineLinkedin,
+  AiOutlineMail
 } from "react-icons/ai";
 import { MdOutlineNightlight } from "react-icons/md";
-import { GrContactInfo } from "react-icons/gr";
 import { ImLab } from "react-icons/im";
 import { ThemeContext } from "./../../App";
 import { useLocation } from "react-router-dom";
@@ -46,6 +46,12 @@ const Sidebar = () => {
       //search functionality
     }
   };
+  const themeClickHandler = () => {
+    if (!sidebarOpen) {
+      // setSidebarOpen(true);
+      setTheme((p) => (p === "light" ? "dark" : "light"))
+    }
+  }
   return (
     <SSidebar isOpen={sidebarOpen}>
       <>
@@ -57,7 +63,7 @@ const Sidebar = () => {
         </SSidebarButton>
       </>
       <SLogo isOpen={sidebarOpen}>
-        <img src="https://i.ibb.co/NWvWNB8/logo1.png" alt="logo" />
+      <SLink to={"/"}><img src="https://i.ibb.co/NWvWNB8/logo1.png" alt="logo" /></SLink>
       </SLogo>
       <SSearch
         onClick={searchClickHandler}
@@ -72,7 +78,6 @@ const Sidebar = () => {
           style={!sidebarOpen ? { width: 0, padding: 0 } : {}}
         />
       </SSearch>
-      <SDivider />
       {linksArray.map(({ icon, label, notification, to }) => (
         <SLinkContainer key={label} isActive={pathname === to}>
           <SLink to={to} style={!sidebarOpen ? { width: "fit-content" } : {}}>
@@ -98,12 +103,12 @@ const Sidebar = () => {
         </SLinkContainer>
       ))}
       <STheme>
-        <SLinkContainer key={"Dark Theme"}>
+        <SLinkContainer key={"Dark Theme"} onClick={themeClickHandler}>
           <SLink to="/" style={!sidebarOpen ? { width: "fit-content" } : {}}>
             <SLinkIcon>
               <MdOutlineNightlight />
             </SLinkIcon>
-            {sidebarOpen && <SLinkLabel>Dark Theme</SLinkLabel>}
+            {sidebarOpen && <SLinkLabel><div id="darkTheme">Dark Theme</div></SLinkLabel>}
           </SLink>
         </SLinkContainer>
         {sidebarOpen && (
@@ -120,7 +125,7 @@ const Sidebar = () => {
         <div id="sns">
           {sidebarOpen &&
             thirdLinksArray.map(({ icon, label, to }) => (
-              <a href={to} key={label}>
+              <a href={to} key={label} style={ theme === "dark" ? { color: "rgb(210,210,210)" } : {color: "rgb(45,45,45)"}}>
                 <SLinkIcon>{icon}</SLinkIcon>
               </a>
             ))}
@@ -151,7 +156,7 @@ const linksArray = [
   },
   {
     label: "Contact Me",
-    icon: <GrContactInfo />,
+    icon: <AiOutlineMail />,
     to: "/contact",
     notification: 1,
   },
@@ -167,7 +172,7 @@ const secondaryLinksArray = [
 const thirdLinksArray = [
   {
     label: "GitHub",
-    icon: <AiOutlineGithub />,
+    icon: <AiFillGithub />,
     to: "https://github.com/AndStatik",
   },
   {
