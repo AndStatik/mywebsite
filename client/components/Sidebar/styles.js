@@ -110,6 +110,9 @@ export const SLinkLabel = styled.span`
     display: block;
     flex: 1;
     margin-left: ${v.smSpacing};
+    #darkTheme {
+      margin-right: 35px;
+    }
 `;
 
 export const SLinkNotification = styled.div`

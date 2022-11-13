@@ -108,7 +108,7 @@ const Sidebar = () => {
             <SLinkIcon>
               <MdOutlineNightlight />
             </SLinkIcon>
-            {sidebarOpen && <SLinkLabel>Dark Theme</SLinkLabel>}
+            {sidebarOpen && <SLinkLabel><div id="darkTheme">Dark Theme</div></SLinkLabel>}
           </SLink>
         </SLinkContainer>
         {sidebarOpen && (
