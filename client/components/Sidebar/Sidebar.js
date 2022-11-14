@@ -30,6 +30,7 @@ import {
 } from "react-icons/ai";
 import { MdOutlineNightlight } from "react-icons/md";
 import { ImLab } from "react-icons/im";
+import { RiTwitchLine } from "react-icons/ri";
 import { ThemeContext } from "./../../App";
 import { useLocation } from "react-router-dom";
 
@@ -189,6 +190,11 @@ const thirdLinksArray = [
     label: "YouTube",
     icon: <AiOutlineYoutube />,
     to: "https://www.youtube.com/@andstatik",
+  },
+  {
+    label: "Twitch",
+    icon: <RiTwitchLine />,
+    to: "https://www.twitch.tv/andstatik",
   },
 ];
 
