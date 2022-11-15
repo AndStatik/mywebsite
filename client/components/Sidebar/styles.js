@@ -21,8 +21,8 @@ export const SSidebarButton = styled.button`
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: black;
-    color: white;
+    background: ${({ theme }) => theme.bg};
+    color: ${({ theme }) => theme.text};
     box-shadow: 0 0 4px ${({ theme }) => theme.bg3}, 0 0 7px ${({ theme }) => theme.bg};
     display: flex;
     align-items: center;
