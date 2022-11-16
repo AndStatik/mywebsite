@@ -21,9 +21,9 @@ export const SSidebarButton = styled.button`
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: black;
-    color: white;
-    box-shadow: 0 0 4px ${({ theme }) => theme.bg3}, 0 0 7px ${({ theme }) => theme.bg};
+    background: ${({ theme }) => theme.bg};
+    color: ${({ theme }) => theme.text};
+    box-shadow: 0 0 4px ${({ theme }) => theme.bg2}, 0 0 7px ${({ theme }) => theme.bg};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,7 +43,7 @@ export const SLogo = styled.div`
 
 export const SSearch = styled.div`
   background: ${({ theme }) => theme.bgAplha};
-  border: 1px solid ${({ theme }) => theme.bg3};
+  border: 1px solid ${({ theme }) => theme.bg2};
   border-radius: ${v.borderRadius};
   input {
     padding: 0 ${v.smSpacing};
@@ -72,16 +72,16 @@ export const SSearchIcon = styled.button`
 export const SDivider = styled.div`
     height: 1px;
     width: 100%;
-    background: ${({ theme }) => theme.bg3};
+    background: ${({ theme }) => theme.bg2};
     margin: 0;
 `;
 
 export const SLinkContainer = styled.div`
-    background: ${({ theme, isActive }) => (!isActive ? `transparent` : theme.bg3)};
+    background: ${({ theme, isActive }) => (!isActive ? `transparent` : theme.bg2)};
     border-radius: ${v.borderRadius};
     margin: 8px 0;
     :hover {
-        box-shadow: inset 0 0 0 1px ${({ theme }) => theme.bg3};
+        box-shadow: inset 0 0 0 1px ${({ theme }) => theme.bg2};
     }
     #sns {
       display: flex;
