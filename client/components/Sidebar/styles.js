@@ -5,7 +5,6 @@ import { btnReset, v } from "../../styles/variables";
 export const SSidebar = styled.div`
   width: ${({isOpen}) => !isOpen ? 'auto' : v.sidebarWidth};
   background: ${({ theme }) => theme.bg};
-  height: ${({isOpen}) => !isOpen ? '100vh' : '100%'};
   padding: ${v.lgSpacing};
   position: relative;
   @media (max-width: 401px) {

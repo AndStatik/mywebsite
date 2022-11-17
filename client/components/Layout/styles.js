@@ -10,7 +10,8 @@ export const SMain = styled.main`
   padding: calc(${v.smSpacing} * 2);
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   h1 {
     font-size: 14px;
   }
