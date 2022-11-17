@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { Carousel, DescriptionCarousel, Greet, Greet1, Greet2, Greet3, LabelCarousel, MyName, Welcome } from './homeStyles'
+import { Carousel, DescriptionCarousel, Greet, Greet1, Greet2, Greet3, LabelCarousel, MyName, SingleCarousel, Welcome } from './homeStyles'
 
 /**
  * COMPONENT
@@ -20,15 +20,13 @@ export const HomePage = props => {
       <br />
       <Carousel>
         {carouselArray.map(({ image, label, description, to }) => (
-          <div key={label}>
+          <SingleCarousel key={label}>
             <a href={to}><img src={image} alt={label} border="0" /></a>
             <LabelCarousel>{label}</LabelCarousel>
             <DescriptionCarousel>{description}</DescriptionCarousel>
-          </div>
+          </SingleCarousel>
         ))}
       </Carousel>
-
-      
     </>
   )
 }
