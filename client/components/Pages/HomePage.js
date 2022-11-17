@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { Carousel, Greet, Greet1, Greet2, Greet3, MyName, Welcome } from './homeStyles'
+import { Carousel, DescriptionCarousel, Greet, Greet1, Greet2, Greet3, LabelCarousel, MyName, Welcome } from './homeStyles'
 
 /**
  * COMPONENT
@@ -19,13 +19,40 @@ export const HomePage = props => {
       </Welcome>
       <br />
       <Carousel>
-        <a href="/"><img src="https://i.ibb.co/QNF82N9/Blog.png" alt="Blog" border="0" /></a>
-        <a href="/"><img src="https://i.ibb.co/wYJMCx7/Projects.png" alt="Projects" border="0" /></a>
-        <a href="/"><img src="https://i.ibb.co/rx8z7FZ/Services.png" alt="Services" border="0" /></a>
+        {carouselArray.map(({ image, label, description, to }) => (
+          <div key={label}>
+            <a href={to}><img src={image} alt={label} border="0" /></a>
+            <LabelCarousel>{label}</LabelCarousel>
+            <DescriptionCarousel>{description}</DescriptionCarousel>
+          </div>
+        ))}
       </Carousel>
+
+      
     </>
   )
 }
+
+const carouselArray = [
+  {
+    label: "Projects",
+    image: "https://i.ibb.co/wYJMCx7/Projects.png",
+    to: "/projects",
+    description: "Take a peek at things I have been working on. Those include personal projects, as well as educative projects!"
+  },
+  {
+    label: "Blog",
+    image: "https://i.ibb.co/QNF82N9/Blog.png",
+    to: "/blog",
+    description: "This is where I discuss and log the developmental process of my projects. There are personal stories too."
+  },
+  {
+    label: "Services",
+    image: "https://i.ibb.co/rx8z7FZ/Services.png",
+    to: "/services",
+    description: "Let’s build something cool! I could build something for you, or we could pair-program together!"
+  },
+];
 
 /**
  * CONTAINER

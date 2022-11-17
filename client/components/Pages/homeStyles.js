@@ -61,7 +61,20 @@ export const Carousel = styled.div`
     flex-direction: row;
     width: min-content;
     img {
-      margin: 20px;
+      margin: 20px 20px 0 20px;
       width: 187px;
     }
+`;
+
+export const LabelCarousel = styled.span`
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+`;
+
+export const DescriptionCarousel = styled.span`
+    display: flex;
+    margin: 5px 15px 0px 15px;
+    font-size: 15px;
+    text-align: justify;
 `;
