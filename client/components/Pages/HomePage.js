@@ -10,6 +10,7 @@ export const HomePage = props => {
   return (
     <>
       <Welcome>
+      <div><iframe src="https://streamable.com/e/s4uskx?autoplay=1&nocontrols=1" frameBorder="0" width="100%" height="100%" allowFullScreen allow="autoplay"></iframe></div>
         <MyName>ANDREY STATKEVSKIY</MyName>
         <img  src="https://i.ibb.co/Jm1LDfF/Welcome-Portrait1.png" alt="Welcome-Portrait1" />
         <Greet>Hi, I'm Andrey!</Greet>
