@@ -15,7 +15,7 @@ export const Welcome = styled.div`
 `;
 
 export const MyName = styled.span`
-    font-family: inherit;
+    font-family: katsumi;
     display: flex;
     justify-content: flex-end;
     color: ${({ theme }) => theme.text};
@@ -78,6 +78,7 @@ export const SingleCarousel = styled.div`
 
 export const LabelCarousel = styled.span`
     display: flex;
+    font-family: katsumi;
     justify-content: center;
     font-size: 30px;
 `;

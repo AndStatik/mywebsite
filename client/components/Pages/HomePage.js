@@ -8,27 +8,13 @@ import { Carousel, DescriptionCarousel, Greet, Greet1, Greet2, Greet3, LabelCaro
 export const HomePage = props => {
 
   return (
-    <>
-      <Welcome>
-      <div><iframe src="https://streamable.com/e/s4uskx?autoplay=1&nocontrols=1" frameBorder="0" width="100%" height="100%" allowFullScreen allow="autoplay"></iframe></div>
+    <div>
+      <video>
+        <source src='https://streamable.com/e/s4uskx?autoplay=1&nocontrols=1' allow="autoplay" />
+      </video>
         <MyName>ANDREY STATKEVSKIY</MyName>
-        <img  src="https://i.ibb.co/Jm1LDfF/Welcome-Portrait1.png" alt="Welcome-Portrait1" />
-        <Greet>Hi, I'm Andrey!</Greet>
-        <Greet1>I build websites and mobile applications of any purpose! I am responsible for everything, starting from drafting and design, and ending with deployment and hosting! If you have a dream project, then I could help you bridge it to reality!</Greet1>
-        <Greet2>Hey there!</Greet2>
-        <Greet3>Check it out!</Greet3>
-      </Welcome>
-      <br />
-      <Carousel>
-        {carouselArray.map(({ image, label, description, to }) => (
-          <SingleCarousel key={label}>
-            <a href={to}><img src={image} alt={label} border="0" /></a>
-            <LabelCarousel>{label}</LabelCarousel>
-            <DescriptionCarousel>{description}</DescriptionCarousel>
-          </SingleCarousel>
-        ))}
-      </Carousel>
-    </>
+        <img src="https://i.ibb.co/YB5qzQ1/avatar.jpg" alt="avatar" border="0" />
+    </div>
   )
 }
 
