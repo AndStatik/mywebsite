@@ -12,10 +12,11 @@ import { ThemeContext } from "./../../App";
 
 const Footer = () => {
   const { setTheme, theme } = useContext(ThemeContext);
+  const timestamp = Date.now();
   return (
     <SFooter>
       <SFootLeft>
-        <p>© 2022 ANDREY STATKEVSKIY</p>
+        <p>© {new Intl.DateTimeFormat('en-US', {year: 'numeric'}).format(timestamp)} ANDREY STATKEVSKIY</p>
       </SFootLeft>
       <SFootRight>
           <div id="sns">
