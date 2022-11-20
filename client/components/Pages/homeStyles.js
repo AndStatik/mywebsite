@@ -68,6 +68,10 @@ export const Carousel = styled.div`
       width: 187px;
       opacity: ${({ theme }) => theme.img};
     }
+    a {
+        color: inherit;
+        text-decoration: none;
+      }
 `;
 
 export const SingleCarousel = styled.div`

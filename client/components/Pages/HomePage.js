@@ -20,11 +20,13 @@ export const HomePage = props => {
       <br />
       <Carousel>
         {carouselArray.map(({ image, label, description, to }) => (
-          <SingleCarousel key={label}>
-            <a href={to}><img src={image} alt={label} border="0" /></a>
-            <LabelCarousel>{label}</LabelCarousel>
-            <DescriptionCarousel>{description}</DescriptionCarousel>
-          </SingleCarousel>
+          <a href={to}>
+            <SingleCarousel key={label}>
+              <img src={image} alt={label} border="0" />
+              <LabelCarousel>{label}</LabelCarousel>
+              <DescriptionCarousel>{description}</DescriptionCarousel>
+            </SingleCarousel>
+            </a>
         ))}
       </Carousel>
     </>
