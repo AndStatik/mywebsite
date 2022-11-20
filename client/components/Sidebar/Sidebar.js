@@ -64,7 +64,7 @@ const Sidebar = () => {
         </SSidebarButton>
       </>
       <SLogo isOpen={sidebarOpen}>
-      <SLink to={"/"}><img src="https://i.ibb.co/NWvWNB8/logo1.png" alt="logo" /></SLink>
+      <SLink to={"/"}><img src="https://i.ibb.co/B42ZYk7/logo1.png" alt="logo" /></SLink>
       </SLogo>
       <SSearch
         onClick={searchClickHandler}
