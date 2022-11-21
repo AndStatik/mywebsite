@@ -12,12 +12,12 @@ export const Welcome = styled.div`
 
 export const Banner = styled.div`
 	opacity: ${({ theme }) => theme.img};
-	margin: -90px 0;
+	margin: -115px 0;
 	background-image: url(https://i.ibb.co/Jm1LDfF/Welcome-Portrait1.png);
 	background-repeat: no-repeat;
 	background-size: 800px;
 	position: relative;
-	bottom: -30%;
+	bottom: -33%;
 	width: 100%;
 	height: 100%;
 `;
@@ -45,7 +45,7 @@ export const Greet = styled.span`
   position: relative;
   width: 28%;
   left: 8%;
-  bottom: 13%;
+  bottom: 4%;
   font-size: 25px;
 `;
 export const Greet1 = styled.span`
@@ -54,8 +54,9 @@ export const Greet1 = styled.span`
   width: 53%;
   position: relative;
   left: 8%;
-  bottom: 7%;
-  font-size: 17px;
+  bottom: -2%;
+  font-size: 18px;
+  line-height: 25px;
 `;
 export const Greet2 = styled.span`
   text-shadow: 1px 1px 4px #fff;
@@ -63,7 +64,7 @@ export const Greet2 = styled.span`
   width: 33%;
   position: relative;
   left: 58%;
-  bottom: 63%;
+  bottom: 62%;
   font-size: 47px;
   transform: rotate(-12deg);
 `;

@@ -15,7 +15,7 @@ export const HomePage = props => {
           <Gradient />
         </Banner>
         <Greet>Hi, I'm Andrey!</Greet>
-        <Greet1>I build websites and mobile applications of any purpose! I am responsible for everything, starting from drafting and design, and ending with deployment and hosting! If you have a dream project, then I could help you bridge it to reality!</Greet1>
+        <Greet1>Welcome to my website! I build websites and mobile applications of any purpose! I am responsible for everything, starting from drafting and design, and ending with deployment and hosting! If you have a dream project, then I could help you bridge it to reality!</Greet1>
         <Greet2>Hey there!</Greet2>
         <Greet3>Check it out!</Greet3>
       </Welcome>
