@@ -5,8 +5,8 @@ import { btnReset, v } from "../../styles/variables";
 export const Welcome = styled.div`
   display: flex;
   flex-direction: column;
-  width: 620px;
-  height: 490px;
+  width: 800px;
+  height: 550px;
   color: rgb(45, 45, 45);
 `;
 
@@ -14,19 +14,19 @@ export const Banner = styled.div`
 	opacity: ${({ theme }) => theme.img};
 	margin: -90px 0;
 	background-image: url(https://i.ibb.co/Jm1LDfF/Welcome-Portrait1.png);
-	background-repear: no-repeat;
+	background-repeat: no-repeat;
+	background-size: 800px;
 	position: relative;
 	bottom: -30%;
-	left: -1%;
-	width: 102%;
+	width: 100%;
 	height: 100%;
 `;
 
 export const Gradient = styled.div`
 	background-image: linear-gradient( to right, 
 		${({ theme }) => theme.bg2} 0%, 
-		rgba(0, 0, 0, 0) 10%, 
-		rgba(0, 0, 0, 0) 90%, 
+		rgba(0, 0, 0, 0) 7%, 
+		rgba(0, 0, 0, 0) 93%, 
 		${({ theme }) => theme.bg2} 100%
 	);
 	width: 100%;
@@ -44,17 +44,17 @@ export const Greet = styled.span`
   font-family: inherit;
   position: relative;
   width: 28%;
-  left: 6%;
-  bottom: 8%;
+  left: 8%;
+  bottom: 13%;
   font-size: 25px;
 `;
 export const Greet1 = styled.span`
   text-shadow: 1px 1px 4px #fff;
   font-family: inherit;
-  width: 58%;
+  width: 53%;
   position: relative;
-  left: 6%;
-  bottom: 3%;
+  left: 8%;
+  bottom: 7%;
   font-size: 17px;
 `;
 export const Greet2 = styled.span`
@@ -62,8 +62,8 @@ export const Greet2 = styled.span`
   font-family: Satisfy;
   width: 33%;
   position: relative;
-  left: 50%;
-  bottom: 58%;
+  left: 58%;
+  bottom: 63%;
   font-size: 47px;
   transform: rotate(-12deg);
 `;
@@ -72,8 +72,8 @@ export const Greet3 = styled.span`
   font-family: Satisfy;
   width: 38%;
   position: relative;
-  left: 32%;
-  bottom: -4%;
+  left: 36%;
+  bottom: -12%;
   font-size: 47px;
   transform: rotate(5deg);
 `;
@@ -81,7 +81,7 @@ export const Greet3 = styled.span`
 export const Carousel = styled.div`
   display: flex;
   flex-direction: row;
-	margin-top: 20px;
+	margin-top: 50px;
   width: min-content;
   img {
     margin: 20px 20px 0 20px;
