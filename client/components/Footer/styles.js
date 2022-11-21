@@ -6,7 +6,14 @@ export const SFooter = styled.div`
   align-items: end;
   justify-content: center;
   width: fit-content;
-  background: ${({ theme }) => theme.bg};
+  background-color: ${({ theme }) => theme.bg};
+  background-image: linear-gradient(
+		to right,
+		${({ theme }) => theme.bg2} 0%,
+		rgba(0, 0, 0, 0) 10%,
+		rgba(0, 0, 0, 0) 90%,
+		${({ theme }) => theme.bg2} 100%
+	);
   height: 50px;
   margin: 25px 0 -16px 0;
 `;
