@@ -85,6 +85,10 @@ export const SLinkContainer = styled.div`
     #darkTheme {
       display: flex;
       align-items: center;
+      margin: -3px 0;
+    }
+    #darkTheme :hover {
+      box-shadow: none;
     }
     #sns {
       display: flex;
