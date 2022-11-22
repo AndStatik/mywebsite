@@ -23,7 +23,7 @@ export const HomePage = props => {
       <Carousel>
         {carouselArray.map(({ image, label, description, to }) => (
           <a href={to} key={label}>
-            <SingleCarousel>
+            <SingleCarousel className='singleCarousel'>
               <img src={image} alt={label} border="0" />
               <LabelCarousel>{label}</LabelCarousel>
               <DescriptionCarousel>{description}</DescriptionCarousel>

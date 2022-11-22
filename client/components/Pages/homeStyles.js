@@ -11,7 +11,7 @@ export const Welcome = styled.div`
 `;
 
 export const Banner = styled.div`
-	opacity: ${({ theme }) => theme.img};
+	opacity: ${({ theme }) => theme.banner};
 	margin: -115px 0;
 	background-image: url(https://i.ibb.co/Jm1LDfF/Welcome-Portrait1.png);
 	background-repeat: no-repeat;
@@ -84,10 +84,18 @@ export const Carousel = styled.div`
   flex-direction: row;
 	margin-top: 50px;
   width: min-content;
-  img {
-    margin: 20px 20px 0 20px;
-    width: 187px;
-    opacity: ${({ theme }) => theme.img};
+  .singleCarousel {
+    img {
+      margin: 20px 20px 0 20px;
+      width: 187px;
+      opacity: ${({ theme }) => theme.img};
+      transition: opacity 2s ease-out 100ms;
+    }
+  }
+  .singleCarousel:hover {
+    img {
+      opacity: ${({ theme }) => theme.name === "light" ? "100%" : "90%"};
+    }
   }
   a {
     color: inherit;
