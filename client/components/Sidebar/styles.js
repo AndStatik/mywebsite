@@ -82,6 +82,10 @@ export const SLinkContainer = styled.div`
     :hover {
         box-shadow: inset 0 0 0 1px ${({ theme }) => theme.bg2};
     }
+    #darkTheme {
+      display: flex;
+      align-items: center;
+    }
     #sns {
       display: flex;
       justify-content: space-evenly;

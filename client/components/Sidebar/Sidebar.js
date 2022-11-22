@@ -105,12 +105,12 @@ const Sidebar = () => {
       ))}
       <STheme>
         <SLinkContainer key={"Dark Theme"} onClick={themeClickHandler}>
-          <SLink to="undefined" style={!sidebarOpen ? { width: "fit-content" } : {}}>
+          <div id="darkTheme" style={!sidebarOpen ? {} : {marginRight: 30+"px", paddingTop: 5+"px", paddingBottom: 5+"px"}}>
             <SLinkIcon>
               <MdOutlineNightlight />
             </SLinkIcon>
-            {sidebarOpen && <SLinkLabel><span id="darkTheme">Dark Theme</span></SLinkLabel>}
-          </SLink>
+            {sidebarOpen && <SLinkLabel>Dark Theme</SLinkLabel>}
+          </div>
         </SLinkContainer>
         {sidebarOpen && (
           <SThemeToggler
