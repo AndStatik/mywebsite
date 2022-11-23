@@ -11,15 +11,18 @@ export const Welcome = styled.div`
 `;
 
 export const Banner = styled.div`
-	opacity: ${({ theme }) => theme.img};
-	margin: -90px 0;
+	opacity: ${({ theme }) => theme.banner};
+	margin: -115px 0;
 	background-image: url(https://i.ibb.co/Jm1LDfF/Welcome-Portrait1.png);
 	background-repeat: no-repeat;
 	background-size: 800px;
 	position: relative;
-	bottom: -30%;
+	bottom: -33%;
 	width: 100%;
 	height: 100%;
+  @media (max-width: 801px) {
+    display: none;
+  }
 `;
 
 export const Gradient = styled.div`
@@ -31,6 +34,9 @@ export const Gradient = styled.div`
 	);
 	width: 100%;
 	height: 100%;
+  @media (max-width: 801px) {
+    display: none;
+  }
 `;
 
 export const MyName = styled.span`
@@ -38,6 +44,9 @@ export const MyName = styled.span`
   display: flex;
   justify-content: flex-end;
   color: ${({ theme }) => theme.text};
+  @media (max-width: 801px) {
+    display: none;
+  }
 `;
 
 export const Greet = styled.span`
@@ -45,8 +54,11 @@ export const Greet = styled.span`
   position: relative;
   width: 28%;
   left: 8%;
-  bottom: 13%;
+  bottom: 4%;
   font-size: 25px;
+  @media (max-width: 801px) {
+    display: none;
+  }
 `;
 export const Greet1 = styled.span`
   text-shadow: 1px 1px 4px #fff;
@@ -54,8 +66,15 @@ export const Greet1 = styled.span`
   width: 53%;
   position: relative;
   left: 8%;
-  bottom: 7%;
-  font-size: 17px;
+  bottom: -2%;
+  font-size: 18px;
+  line-height: 25px;
+  @media (max-width: 801px) {
+    width: 30%;
+    left: 35%;
+    bottom: -15%;
+    text-align: justify;
+  }
 `;
 export const Greet2 = styled.span`
   text-shadow: 1px 1px 4px #fff;
@@ -63,9 +82,15 @@ export const Greet2 = styled.span`
   width: 33%;
   position: relative;
   left: 58%;
-  bottom: 63%;
+  bottom: 62%;
   font-size: 47px;
   transform: rotate(-12deg);
+  @media (max-width: 801px) {
+    left: 42%;
+    bottom: 44%;
+    font-size: 35px;
+    transform: none;
+  }
 `;
 export const Greet3 = styled.span`
   text-shadow: 1px 1px 4px #fff;
@@ -76,6 +101,12 @@ export const Greet3 = styled.span`
   bottom: -12%;
   font-size: 47px;
   transform: rotate(5deg);
+  @media (max-width: 801px) {
+    left: 39%;
+    bottom: -7%;
+    font-size: 35px;
+    transform: none;
+  }
 `;
 
 export const Carousel = styled.div`
@@ -83,14 +114,26 @@ export const Carousel = styled.div`
   flex-direction: row;
 	margin-top: 50px;
   width: min-content;
-  img {
-    margin: 20px 20px 0 20px;
-    width: 187px;
-    opacity: ${({ theme }) => theme.img};
+  .singleCarousel {
+    img {
+      margin: 20px 20px 0 20px;
+      width: 187px;
+      opacity: ${({ theme }) => theme.img};
+      transition: opacity 2s ease-out 100ms;
+    }
+  }
+  .singleCarousel:hover {
+    img {
+      opacity: ${({ theme }) => theme.name === "light" ? "100%" : "90%"};
+    }
   }
   a {
     color: inherit;
     text-decoration: none;
+  }
+  @media (max-width: 801px) {
+    flex-direction: column;
+    margin-top: -170px;
   }
 `;
 

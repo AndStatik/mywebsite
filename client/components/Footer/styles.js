@@ -16,6 +16,9 @@ export const SFooter = styled.div`
 	);
   height: 50px;
   margin: 25px 0 -16px 0;
+  @media (max-width: 801px) {
+    display: none;
+  }
 `;
 
 export const SFootLeft = styled.div`
