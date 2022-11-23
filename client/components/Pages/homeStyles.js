@@ -20,6 +20,9 @@ export const Banner = styled.div`
 	bottom: -33%;
 	width: 100%;
 	height: 100%;
+  @media (max-width: 801px) {
+    display: none;
+  }
 `;
 
 export const Gradient = styled.div`
@@ -31,6 +34,9 @@ export const Gradient = styled.div`
 	);
 	width: 100%;
 	height: 100%;
+  @media (max-width: 801px) {
+    display: none;
+  }
 `;
 
 export const MyName = styled.span`
@@ -38,6 +44,9 @@ export const MyName = styled.span`
   display: flex;
   justify-content: flex-end;
   color: ${({ theme }) => theme.text};
+  @media (max-width: 801px) {
+    display: none;
+  }
 `;
 
 export const Greet = styled.span`
@@ -47,6 +56,9 @@ export const Greet = styled.span`
   left: 8%;
   bottom: 4%;
   font-size: 25px;
+  @media (max-width: 801px) {
+    display: none;
+  }
 `;
 export const Greet1 = styled.span`
   text-shadow: 1px 1px 4px #fff;
@@ -57,6 +69,12 @@ export const Greet1 = styled.span`
   bottom: -2%;
   font-size: 18px;
   line-height: 25px;
+  @media (max-width: 801px) {
+    width: 30%;
+    left: 35%;
+    bottom: -15%;
+    text-align: justify;
+  }
 `;
 export const Greet2 = styled.span`
   text-shadow: 1px 1px 4px #fff;
@@ -67,6 +85,12 @@ export const Greet2 = styled.span`
   bottom: 62%;
   font-size: 47px;
   transform: rotate(-12deg);
+  @media (max-width: 801px) {
+    left: 42%;
+    bottom: 44%;
+    font-size: 35px;
+    transform: none;
+  }
 `;
 export const Greet3 = styled.span`
   text-shadow: 1px 1px 4px #fff;
@@ -77,6 +101,12 @@ export const Greet3 = styled.span`
   bottom: -12%;
   font-size: 47px;
   transform: rotate(5deg);
+  @media (max-width: 801px) {
+    left: 39%;
+    bottom: -7%;
+    font-size: 35px;
+    transform: none;
+  }
 `;
 
 export const Carousel = styled.div`
@@ -100,6 +130,10 @@ export const Carousel = styled.div`
   a {
     color: inherit;
     text-decoration: none;
+  }
+  @media (max-width: 801px) {
+    flex-direction: column;
+    margin-top: -170px;
   }
 `;
 
