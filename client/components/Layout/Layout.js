@@ -1,8 +1,7 @@
 import React from "react";
 import Sidebar from "../Sidebar/Sidebar";
-import Footer from "../Footer/Footer"
+import Footer from "../Footer/Footer";
 import { SLayout, SMain } from "./styles";
-
 
 const Layout = ({ children }) => {
   return (

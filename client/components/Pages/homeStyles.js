@@ -119,7 +119,7 @@ export const Carousel = styled.div`
       margin: 20px 20px 0 20px;
       width: 187px;
       opacity: ${({ theme }) => theme.img};
-      transition: opacity 2s ease-out 100ms;
+      transition: opacity 1s ease-out 100ms;
     }
   }
   .singleCarousel:hover {
