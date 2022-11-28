@@ -1,7 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { MyProjects, ProjectsContainer, SingleProject, ThreeProjects } from './projectsStyles'
-
+import { SDivider, MyProjects, ProjectsContainer, SingleProject, ThreeProjects } from './projectsStyles'
 /**
  * COMPONENT
  */
@@ -15,6 +14,7 @@ export const ProjectsPage = props => {
         <SingleProject id="sProj" />
         <SingleProject id="tProj" />
       </ThreeProjects>
+      <SDivider />
     </ProjectsContainer>
   )
 }

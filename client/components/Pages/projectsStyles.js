@@ -24,11 +24,19 @@ export const ThreeProjects = styled.div`
   justify-content: space-evenly;
   flex-direction: row;
   width: 100%;
+  margin: 20px 0;
   #fProj {
+    opacity: 1;
+    background-color: inherit;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(https://raw.githubusercontent.com/Bisque-gs/graceshopper-project/main/public/logo.png)
   }
+  #fProj:hover {
+    background-color: #9ba6e2;
+    opacity: 0.4;
+  }
+
   #sProj {
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,4 +54,11 @@ export const SingleProject = styled.div`
   height: 200px;
   background: black;
   opacity: 0.2;
+`;
+
+export const SDivider = styled.div`
+    height: 1px;
+    width: 100%;
+    background: ${({ theme }) => theme.bg};
+    margin: 0;
 `;
