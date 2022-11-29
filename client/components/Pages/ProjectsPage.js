@@ -1,6 +1,6 @@
 import React,{ useContext } from "react";
 import {connect} from 'react-redux'
-import { SDivider, MyProjects, ProjectsContainer, SingleProject, ThreeProjects } from './projectsStyles'
+import { SDivider, MyProjects, ProjectsContainer, FirstProject, SecondProject, ThirdProject, ThreeProjects } from './projectsStyles'
 import { AiFillGithub } from "react-icons/ai";
 import { BiGlobe } from "react-icons/bi";
 import { SLinkIcon } from "../Sidebar/styles";
@@ -13,29 +13,15 @@ export const ProjectsPage = props => {
     <ProjectsContainer>
       <MyProjects>My Projects</MyProjects>
       <ThreeProjects>
-        <SingleProject id="fProj">
-          <div id="projInfo">
-            <p id="projTitle">PokeBay</p>
-            <p id="projDesc">An e-commerce website for people interested in stocking up with some pokemons!</p>
-            <div id="projSNS">
-              {linksArray.map(({ icon, label, to }) => (
-                <a
-                  href={to}
-                  key={label}
-                  style={
-                    theme === "dark"
-                      ? { color: "rgb(210,210,210)" }
-                      : { color: "rgb(45,45,45)" }
-                }
-              >
-                <SLinkIcon>{icon}</SLinkIcon>
-              </a>
-            ))}
-            </div>
-          </div>
-        </SingleProject>
-        <SingleProject id="sProj" />
-        <SingleProject id="tProj" />
+        <FirstProject>
+          <img src="https://raw.githubusercontent.com/Bisque-gs/graceshopper-project/main/public/logo.png" alt="PokeBay logo" />
+        </FirstProject>
+        <SecondProject>
+          <img src="https://raw.githubusercontent.com/Bisque-gs/graceshopper-project/main/public/logo.png" alt="PokeBay logo" />
+        </SecondProject>
+        <ThirdProject>
+          <img src="https://raw.githubusercontent.com/Bisque-gs/graceshopper-project/main/public/logo.png" alt="PokeBay logo" />
+        </ThirdProject>
       </ThreeProjects>
       <SDivider />
     </ProjectsContainer>
