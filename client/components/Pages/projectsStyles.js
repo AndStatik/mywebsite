@@ -26,15 +26,14 @@ export const ThreeProjects = styled.div`
   width: 100%;
   margin: 20px 0;
   #fProj {
-    opacity: 1;
     background-color: inherit;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(https://raw.githubusercontent.com/Bisque-gs/graceshopper-project/main/public/logo.png)
   }
   #fProj:hover {
-    background-color: #9ba6e2;
-    opacity: 0.4;
+    background-color: ${({ theme }) => theme.bg};
+    opacity: 1;
   }
 
   #sProj {
@@ -50,10 +49,36 @@ export const ThreeProjects = styled.div`
 `;
 
 export const SingleProject = styled.div`
-  width: 200px;
-  height: 200px;
-  background: black;
-  opacity: 0.2;
+  width: 250px;
+  height: 250px;
+  color: ${({ theme }) => theme.bg};
+  text-shadow: 1px 1px 4px #fff;
+  #projInfo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+  }
+  #projInfo:hover {
+    opacity: 1;
+  }
+  #projTitle {
+    font-size: 30px;
+    margin: 0 auto 20px auto;
+  }
+  #projDesc {
+    font-size: 20px;
+    margin: 0 20px;
+  }
+  #projSNS {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    svg {
+      font-size: 30px;
+    }
+  }
 `;
 
 export const SDivider = styled.div`
