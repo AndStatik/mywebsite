@@ -1,6 +1,6 @@
 import React,{ useContext } from "react";
 import {connect} from 'react-redux'
-import { SDivider, MyProjects, ProjectsContainer, FirstProject, SecondProject, ThirdProject, ThreeProjects } from './projectsStyles'
+import { SDivider, MyProjects, ProjectsContainer, SingleProject, ThreeProjects, Overlay, OverlayTitle, OverlayDesc } from './projectsStyles'
 import { AiFillGithub } from "react-icons/ai";
 import { BiGlobe } from "react-icons/bi";
 import { SLinkIcon } from "../Sidebar/styles";
@@ -13,15 +13,19 @@ export const ProjectsPage = props => {
     <ProjectsContainer>
       <MyProjects>My Projects</MyProjects>
       <ThreeProjects>
-        <FirstProject>
+        <SingleProject>
           <img src="https://raw.githubusercontent.com/Bisque-gs/graceshopper-project/main/public/logo.png" alt="PokeBay logo" />
-        </FirstProject>
-        <SecondProject>
+          <Overlay>
+            <OverlayTitle>Pokebay</OverlayTitle>
+            <OverlayDesc>An e-commerce website for people interested in stocking up with some pokemons!</OverlayDesc>
+          </Overlay>
+        </SingleProject>
+        <SingleProject>
           <img src="https://raw.githubusercontent.com/Bisque-gs/graceshopper-project/main/public/logo.png" alt="PokeBay logo" />
-        </SecondProject>
-        <ThirdProject>
+        </SingleProject>
+        <SingleProject>
           <img src="https://raw.githubusercontent.com/Bisque-gs/graceshopper-project/main/public/logo.png" alt="PokeBay logo" />
-        </ThirdProject>
+        </SingleProject>
       </ThreeProjects>
       <SDivider />
     </ProjectsContainer>

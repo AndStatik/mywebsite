@@ -25,32 +25,64 @@ export const ThreeProjects = styled.div`
   flex-direction: row;
   width: 100%;
   margin: 20px 0;
-  div {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    img {
-      width: 300px;
-      margin: -25px;
-    }
+  padding: 0 50px;
+    
+`;
+
+export const SingleProject = styled.div`
+  width: 250px;
+  border-radius: 50%;
+  position: relative;
+  img {
+    width: 100%;
+    display: block;
   }
 `;
 
-export const FirstProject = styled.div`
-
+export const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(202, 223, 235, 0.9);
+  color: #000;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+  * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+  }
+  :hover {
+    opacity: 1;
+  }
+  :hover>* {
+    transform: translateY(0);
+  }
 `;
 
-export const SecondProject = styled.div`
-
+export const OverlayTitle = styled.div`
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: -45px;
 `;
 
-export const ThirdProject = styled.div`
-
+export const OverlayDesc = styled.p`
+  font-size: 1.25em;
+  margin-top: 0.25em;
+  text-align: center;
+  padding: 0 5px;
 `;
 
 export const SDivider = styled.div`
-    height: 1px;
-    width: 100%;
-    background: ${({ theme }) => theme.bg};
-    margin: 0;
+  height: 1px;
+  width: 100%;
+  background: ${({ theme }) => theme.bg};
+  margin: 0;
 `;
