@@ -19,6 +19,7 @@ export const ProjectsPage = props => {
                 <a
                   href={to}
                   key={label}
+                  target="_blank" rel="noopener noreferrer"
                   style={{ color: "rgb(45,45,45)" }}
                 >
                   {icon}
@@ -37,6 +38,7 @@ export const ProjectsPage = props => {
                 <a
                   href={to}
                   key={label}
+                  target="_blank" rel="noopener noreferrer"
                   style={{ color: "rgb(45,45,45)" }}
                 >
                   {icon}
@@ -46,10 +48,28 @@ export const ProjectsPage = props => {
           </Overlay>
         </SingleProject>
         <SingleProject>
-          <img src="https://raw.githubusercontent.com/Bisque-gs/graceshopper-project/main/public/logo.png" alt="PokeBay logo" />
+          <img src="https://i.ibb.co/ynrHsRg/hiitcoin.png" alt="hiitcoin logo" />
+          <Overlay>
+            <OverlayTitle>HIITCoin</OverlayTitle>
+            <OverlayDesc>A minimal mobile app that lets design and perform workouts!</OverlayDesc>
+            <OverlaySNS>
+              {HiiTLinksArray.map(({ icon, label, to }) => (
+                <a
+                  href={to}
+                  key={label}
+                  target="_blank" rel="noopener noreferrer"
+                  style={{ color: "rgb(45,45,45)" }}
+                >
+                  {icon}
+                </a>
+              ))}
+            </OverlaySNS>
+          </Overlay>
         </SingleProject>
       </ThreeProjects>
       <SDivider />
+      <MyProjects>My Resume</MyProjects>
+
     </ProjectsContainer>
   )
 }
@@ -84,7 +104,7 @@ const HiiTLinksArray = [
   {
     label: "Website",
     icon: <AiOutlineLink />,
-    to: "hiitcoin.netlify.app/",
+    to: "https://hiitcoin.netlify.app/",
   }
 ]
 
