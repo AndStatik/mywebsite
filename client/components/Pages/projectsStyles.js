@@ -70,14 +70,24 @@ export const Overlay = styled.div`
 export const OverlayTitle = styled.div`
   font-size: 2em;
   font-weight: bold;
-  margin-top: -45px;
+  margin-top: -30px;
 `;
 
 export const OverlayDesc = styled.p`
   font-size: 1.25em;
-  margin-top: 0.25em;
+  margin-top: 25px;
   text-align: center;
   padding: 0 5px;
+`;
+
+export const OverlaySNS = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  svg {
+    font-size: 40px;
+  }
+  margin-top: -30px;
 `;
 
 export const SDivider = styled.div`
