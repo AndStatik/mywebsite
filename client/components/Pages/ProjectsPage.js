@@ -11,6 +11,7 @@ import {
   OverlayTitle,
   OverlayDesc,
   OverlaySNS,
+  OverlayTurn,
 } from "./projectsStyles";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 
@@ -73,7 +74,7 @@ export const ProjectsPage = (props) => {
             src="https://i.ibb.co/ynrHsRg/hiitcoin.png"
             alt="hiitcoin logo"
           />
-          <Overlay>
+          <OverlayTurn>
             <OverlayTitle>HIITCoin</OverlayTitle>
             <OverlayDesc>
               A minimal mobile app that lets design and perform workouts!
@@ -91,7 +92,7 @@ export const ProjectsPage = (props) => {
                 </a>
               ))}
             </OverlaySNS>
-          </Overlay>
+          </OverlayTurn>
         </SingleProject>
       </ThreeProjects>
       <SDivider />

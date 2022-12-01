@@ -104,6 +104,38 @@ export const OverlayBlur = styled.div`
   }
 `;
 
+export const OverlayTurn = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(234,239,196,0.85);
+  color: #000;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+  :not(a) > * {
+    transform: translateY(20px) rotate(0.5turn);
+    transition: transform 0.25s;
+  }
+  * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+  }
+  :hover {
+    opacity: 1;
+  }
+  :hover>* {
+    transform: translateY(0) rotate(0turn);
+  }
+`;
+
 export const OverlayTitle = styled.div`
   font-size: 2em;
   font-weight: bold;
