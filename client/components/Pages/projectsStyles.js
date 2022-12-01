@@ -55,6 +55,10 @@ export const Overlay = styled.div`
   justify-content: center;
   opacity: 0;
   transition: opacity 0.25s;
+  :not(a) > * {
+    transform: translateY(20px) rotate(10deg);
+    transition: transform 0.25s;
+  }
   * {
     transform: translateY(20px);
     transition: transform 0.25s;
@@ -63,7 +67,40 @@ export const Overlay = styled.div`
     opacity: 1;
   }
   :hover>* {
-    transform: translateY(0);
+    transform: translateY(0) rotate(0deg);
+  }
+`;
+
+export const OverlayBlur = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background: rgba(177,226,203,0.65);
+  color: #000;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+  :not(a) > * {
+    transform: translateY(20px) scale(0);
+    transition: transform 0.25s;
+  }
+  * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+  }
+  :hover {
+    opacity: 1;
+  }
+  :hover>* {
+    transform: translateY(0) scale(1);
   }
 `;
 
