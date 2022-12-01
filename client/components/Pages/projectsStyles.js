@@ -15,8 +15,9 @@ export const MyProjects = styled.span`
   font-family: Satisfy;
   font-size: 47px;
   transform: rotate(-7deg);
-  margin-bottom: 50px;
+  margin: 15px auto 50px auto;
   text-align: center;
+  color: rgb(45,45,45);
 `;
 
 export const ThreeProjects = styled.div`
@@ -30,7 +31,7 @@ export const ThreeProjects = styled.div`
 `;
 
 export const SingleProject = styled.div`
-  width: 250px;
+  width: 200px;
   border-radius: 50%;
   position: relative;
   img {
@@ -137,14 +138,13 @@ export const OverlayTurn = styled.div`
 `;
 
 export const OverlayTitle = styled.div`
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bold;
   margin-top: -30px;
 `;
 
 export const OverlayDesc = styled.p`
-  font-size: 1.25em;
-  margin-top: 25px;
+  margin-top: 10px;
   text-align: center;
   padding: 0 5px;
 `;
@@ -156,7 +156,7 @@ export const OverlaySNS = styled.div`
   svg {
     font-size: 40px;
   }
-  margin-top: -30px;
+  margin-top: -35px;
 `;
 
 export const SDivider = styled.div`
