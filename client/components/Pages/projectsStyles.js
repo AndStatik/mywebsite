@@ -8,14 +8,6 @@ export const ProjectsContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  #chartdiv {
-    width: 100%;
-    height: 600px;
-  }
-  
-  .demo-theme-dark .demo-background {
-    background: #000;
-  }
 `;
 
 export const MyProjects = styled.span`
@@ -173,3 +165,46 @@ export const SDivider = styled.div`
   background: ${({ theme }) => theme.bg};
   margin: 0;
 `;
+
+export const BtnContainer = styled.div`
+  width: 50%;
+  display: flex;
+  margin: 0 auto;
+`;
+export const OpenSaveBtn = styled.div`
+  border: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: rgb(154, 194, 216);
+  padding: 17px 60px;
+  margin: 0 auto;
+  span {
+    position: relative; 
+    z-index: 1;
+  }
+  :after {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    background: rgb(46, 54, 65);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  }
+  :hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%);
+    transform: translateX(-9%) translateY(-25%);
+  }
+`
