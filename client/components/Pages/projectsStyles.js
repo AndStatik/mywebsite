@@ -8,6 +8,14 @@ export const ProjectsContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+  #chartdiv {
+    width: 100%;
+    height: 600px;
+  }
+  
+  .demo-theme-dark .demo-background {
+    background: #000;
+  }
 `;
 
 export const MyProjects = styled.span`
