@@ -186,6 +186,8 @@ export const OpenSaveBtn = styled.div`
   background-color: rgb(154, 194, 216);
   padding: 17px 60px;
   margin: 0 auto;
+  width: 200px;
+  padding: 15px 0;
   span {
     position: relative; 
     z-index: 1;
