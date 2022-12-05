@@ -12,6 +12,8 @@ import {
   OverlayDesc,
   OverlaySNS,
   OverlayTurn,
+  BtnContainer,
+  OpenSaveBtn,
 } from "./projectsStyles";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 
@@ -97,6 +99,10 @@ export const ProjectsPage = (props) => {
       </ThreeProjects>
       <SDivider />
       <MyProjects>My Resume</MyProjects>
+      <BtnContainer>
+        <OpenSaveBtn><span>Open in New Tab</span></OpenSaveBtn>
+        <OpenSaveBtn><span>Download</span></OpenSaveBtn>
+      </BtnContainer>
     </ProjectsContainer>
   );
 };
