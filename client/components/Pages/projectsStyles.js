@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { btnReset, v } from "../../styles/variables";
 
 export const ProjectsContainer = styled.div`
-  width: 100%;
+  width: 98%;
   margin-left: 60px;
   display: flex;
   justify-content: center;
@@ -167,9 +167,13 @@ export const SDivider = styled.div`
 `;
 
 export const BtnContainer = styled.div`
-  width: 50%;
   display: flex;
   margin: 0 auto;
+  a {
+    color: #fff;
+    padding: 0 15px;
+    text-decoration: none;
+  }
 `;
 export const OpenSaveBtn = styled.div`
   border: none;

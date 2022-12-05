@@ -20,6 +20,10 @@ module.exports = {
         }
       },
       {
+        test: /\.(otf|pdf)$/,
+        loader: 'file-loader'
+    },
+      {
         test: /\.svg$/,
         use: ['@svgr/webpack'],
       },

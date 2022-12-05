@@ -16,6 +16,7 @@ import {
   OpenSaveBtn,
 } from "./projectsStyles";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
+import Resume from "../../../public/Resume.pdf"
 
 export const ProjectsPage = (props) => {
   return (
@@ -100,8 +101,8 @@ export const ProjectsPage = (props) => {
       <SDivider />
       <MyProjects>My Resume</MyProjects>
       <BtnContainer>
-        <OpenSaveBtn><span>Open in New Tab</span></OpenSaveBtn>
-        <OpenSaveBtn><span>Download</span></OpenSaveBtn>
+        <a href="Resume.pdf" target="_blank"><OpenSaveBtn><span>Open in New Tab</span></OpenSaveBtn></a>
+        <a href="Resume.pdf" target="_blank" download="Resume - Andrey Statkevskiy"><OpenSaveBtn><span>Download</span></OpenSaveBtn></a>
       </BtnContainer>
     </ProjectsContainer>
   );
