@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import { btnReset, v } from "../../styles/variables";
 
 export const ProjectsContainer = styled.div`
-  width: 98%;
-  margin-left: 60px;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -27,7 +26,6 @@ export const ThreeProjects = styled.div`
   width: 100%;
   margin: 20px 0;
   padding: 0 50px;
-    
 `;
 
 export const SingleProject = styled.div`
@@ -161,9 +159,9 @@ export const OverlaySNS = styled.div`
 
 export const SDivider = styled.div`
   height: 1px;
-  width: 100%;
+  width: 75%;
   background: ${({ theme }) => theme.bg};
-  margin: 0;
+  margin: 0 auto;
 `;
 
 export const BtnContainer = styled.div`
