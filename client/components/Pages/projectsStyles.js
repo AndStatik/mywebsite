@@ -7,6 +7,10 @@ export const ProjectsContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+  #chartdiv {
+    width: 100%;
+    height: 600px;
+  }
 `;
 
 export const MyProjects = styled.span`
