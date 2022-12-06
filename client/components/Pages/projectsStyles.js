@@ -4,10 +4,13 @@ import { btnReset, v } from "../../styles/variables";
 
 export const ProjectsContainer = styled.div`
   width: 100%;
-  margin-left: 60px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  #chartdiv {
+    width: 100%;
+    height: 600px;
+  }
 `;
 
 export const MyProjects = styled.span`
@@ -27,7 +30,6 @@ export const ThreeProjects = styled.div`
   width: 100%;
   margin: 20px 0;
   padding: 0 50px;
-    
 `;
 
 export const SingleProject = styled.div`
@@ -161,15 +163,19 @@ export const OverlaySNS = styled.div`
 
 export const SDivider = styled.div`
   height: 1px;
-  width: 100%;
+  width: 75%;
   background: ${({ theme }) => theme.bg};
-  margin: 0;
+  margin: 0 auto;
 `;
 
 export const BtnContainer = styled.div`
-  width: 50%;
   display: flex;
   margin: 0 auto;
+  a {
+    color: #fff;
+    padding: 0 15px;
+    text-decoration: none;
+  }
 `;
 export const OpenSaveBtn = styled.div`
   border: none;
