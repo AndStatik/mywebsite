@@ -39,103 +39,67 @@ export const ProjectsPage = (props) => {
 
     chart.data = [
       {
-        category: "Module #1",
-        start: "2019-01-10",
-        end: "2019-01-13",
-        color: colorSet.getIndex(0),
-        task: "Gathering requirements",
-      },
-      {
-        category: "Module #1",
-        start: "2019-02-05",
-        end: "2019-04-18",
-        color: colorSet.getIndex(0),
-        task: "Development",
-      },
-      {
-        category: "Module #2",
-        start: "2019-01-08",
-        end: "2019-01-10",
-        color: colorSet.getIndex(5),
-        task: "Gathering requirements",
-      },
-      {
-        category: "Module #2",
-        start: "2019-01-12",
-        end: "2019-01-15",
-        color: colorSet.getIndex(5),
-        task: "Producing specifications",
-      },
-      {
-        category: "Module #2",
-        start: "2019-01-16",
-        end: "2019-02-05",
-        color: colorSet.getIndex(5),
-        task: "Development",
-      },
-      {
-        category: "Module #2",
-        start: "2019-02-10",
-        end: "2019-02-18",
-        color: colorSet.getIndex(5),
-        task: "Testing and QA",
-      },
-      {
-        category: "",
-      },
-      {
-        category: "Module #3",
-        start: "2019-01-01",
-        end: "2019-01-19",
-        color: colorSet.getIndex(9),
-        task: "Gathering requirements",
-      },
-      {
-        category: "Module #3",
-        start: "2019-02-01",
-        end: "2019-02-10",
-        color: colorSet.getIndex(9),
-        task: "Producing specifications",
-      },
-      {
-        category: "Module #3",
-        start: "2019-03-10",
-        end: "2019-04-15",
-        color: colorSet.getIndex(9),
-        task: "Development",
-      },
-      {
-        category: "Module #3",
-        start: "2019-04-20",
-        end: "2019-04-30",
-        color: colorSet.getIndex(9),
-        task: "Testing and QA",
-        disabled2: false,
-        image2: "logo.png",
-        location: 0,
-      },
-      {
-        category: "Module #4",
-        start: "2019-01-15",
-        end: "2019-02-12",
-        color: colorSet.getIndex(15),
-        task: "Gathering requirements",
+        category: "Education",
+        start: "2016-08-22",
+        end: "2019-01-01",
+        color: "rgb(221,212,28)", //yellow
+        task: "City University of New York - NYCCT - AAS in Electrical Engineering",
         disabled1: false,
-        image1: "logo.png",
+        image1: "nycct.png",
       },
       {
-        category: "Module #4",
-        start: "2019-02-25",
-        end: "2019-03-10",
-        color: colorSet.getIndex(15),
-        task: "Development",
+        category: "Education",
+        start: "2019-01-01",
+        end: "2021-01-01",
+        color: "rgb(27,146,173)", //blue
+        task: "City University of New York - NYCCT - BT in Electrical Engineering",
+        disabled1: false,
+        image1: "nycct.png",
       },
       {
-        category: "Module #4",
-        start: "2019-03-23",
-        end: "2019-04-29",
-        color: colorSet.getIndex(15),
-        task: "Testing and QA",
+        category: "Education",
+        start: "2022-01-13",
+        end: "2022-05-27",
+        color: "rgb(221,28,41)", //red
+        task: "Fullstack Academy - Web Development",
+        disabled1: false,
+        image1: "fsa.jpg",
+      },
+      {
+        category: "Work",
+        start: "2017-01-16",
+        end: "2019-06-28",
+        color: "rgb(221,138,28)", //orange
+        task: "Accelerated Study in Associate Programs - Peer Mentor",
+        disabled2: false,
+        image2: "asap.jpg",
+      },
+      {
+        category: "Work",
+        start: "2018-08-20",
+        end: "2019-08-16",
+        color: "rgb(28,221,112)", //emerald
+        task: "Research Scholars - Fiber Optics Technician",
+        disabled2: false,
+        image2: "crsp.jpg",
+      },
+      {
+        category: "Work",
+        start: "2019-09-01",
+        end: "2020-09-01",
+        color: "rgb(106,28,221)", //purple
+        task: "CVIEWS - CCTV Electrician",
+        disabled1: false,
+        image1: "cviews.jpg",
+      },
+      {
+        category: "Work",
+        start: "2020-09-01",
+        end: "2021-01-01",
+        color: "rgb(89,221,28)", //salad
+        task: "Virtalink - Internet Service Technician",
+        disabled1: false,
+        image1: "virtalink.jpg",
       },
     ];
 
@@ -208,6 +172,7 @@ export const ProjectsPage = (props) => {
     imageBullet1.image = new am4core.Image();
     imageBullet1.image.propertyFields.href = "image1";
 
+    // IN CASE YOU WANT A BULLET THATS PINNED AT THE END
     let imageBullet2 = series.bullets.push(new am4plugins_bullets.PinBullet());
     imageBullet2.disabled = true;
     imageBullet2.propertyFields.disabled = "disabled2";
@@ -373,13 +338,13 @@ export const ProjectsPage = (props) => {
       <SDivider />
       <MyProjects>My Resume</MyProjects>
       <BtnContainer>
-        <a href="Resume.pdf" target="_blank">
+        <a href="/Resume/Resume.pdf" target="_blank">
           <OpenSaveBtn>
             <span>Open in New Tab</span>
           </OpenSaveBtn>
         </a>
         <a
-          href="Resume.pdf"
+          href="/Resume/Resume.pdf"
           target="_blank"
           download="Resume - Andrey Statkevskiy"
         >
