@@ -172,11 +172,11 @@ export const ProjectsPage = (props) => {
     imageBullet1.image = new am4core.Image();
     imageBullet1.image.propertyFields.href = "image1";
 
-    // IN CASE YOU WANT A BULLET THATS PINNED AT THE END
+    // IN CASE YOU WANT A BULLET THATS PINNED IN THE CENTER
     let imageBullet2 = series.bullets.push(new am4plugins_bullets.PinBullet());
     imageBullet2.disabled = true;
     imageBullet2.propertyFields.disabled = "disabled2";
-    imageBullet2.locationX = 0;
+    imageBullet2.locationX = 0.5;
     imageBullet2.circle.radius = 20;
     imageBullet2.propertyFields.stroke = "color";
     imageBullet2.background.propertyFields.fill = "color";
