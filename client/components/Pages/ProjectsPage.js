@@ -66,6 +66,15 @@ export const ProjectsPage = (props) => {
         image1: "fsa.jpg",
       },
       {
+        category: "Education",
+        start: "2022-07-04",
+        end: "2023-03-31",
+        color: "rgb(221,103,239)", //lavender
+        task: "Japanese Language School",
+        disabled1: false,
+        image1: "seikou.png",
+      },
+      {
         category: "Work",
         start: "2017-01-16",
         end: "2019-06-28",
@@ -188,46 +197,46 @@ export const ProjectsPage = (props) => {
     eventSeries.dataFields.categoryY = "category";
     eventSeries.data = [
       {
-        category: "",
-        eventDate: "2019-01-15",
+        category: "Work",
+        eventDate: "2017-01-16",
         letter: "A",
-        description: "Something happened here",
+        description: "Peer Mentorship",
       },
       {
-        category: "",
-        eventDate: "2019-01-23",
+        category: "Education",
+        eventDate: "2017-07-01",
         letter: "B",
-        description: "Something happened here",
+        description: "Working on my Associate degree",
       },
       {
-        category: "",
-        eventDate: "2019-02-10",
+        category: "Work",
+        eventDate: "2018-12-24",
         letter: "C",
-        description: "Something happened here",
+        description: "Working on a fiber-optics research project",
       },
       {
-        category: "",
-        eventDate: "2019-02-29",
+        category: "Education",
+        eventDate: "2019-03-29",
         letter: "D",
-        description: "Something happened here",
+        description: "Working on my Bachelor degree",
       },
       {
-        category: "",
-        eventDate: "2019-03-06",
+        category: "Work",
+        eventDate: "2019-06-28",
         letter: "E",
-        description: "Something happened here",
+        description: "Left the peer mentor job in favor of a tech-related job",
       },
       {
-        category: "",
-        eventDate: "2019-03-12",
+        category: "Education",
+        eventDate: "2021-06-15",
         letter: "F",
-        description: "Something happened here",
+        description: "In process of changing careers to SWE :)",
       },
       {
-        category: "",
-        eventDate: "2019-03-22",
+        category: "Education",
+        eventDate: "2022-11-15",
         letter: "G",
-        description: "Something happened here",
+        description: "Complimenting my skillset, still passionate about SWE",
       },
     ];
     eventSeries.strokeOpacity = 0;
