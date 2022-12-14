@@ -7,11 +7,14 @@ import {
   DirectContactContainer,
 } from "./contactStyles";
 import { MdPlace, MdPhone } from "react-icons/md";
-import { FaEnvelope } from "react-icons/fa";
+import { FaEnvelope, FaTelegramPlane } from "react-icons/fa";
 import { ThemeContext } from "./../../App";
 
 export const ContactMePage = (props) => {
   const { setTheme, theme } = useContext(ThemeContext);
+
+
+  // https://codepen.io/bobbykorec/pen/qOGbyr?editors=0110
 
   return (
     <ContactContainer>
@@ -63,7 +66,7 @@ export const ContactMePage = (props) => {
               value="SEND"
             >
               <div className="alt-send-button">
-                <i className="fa fa-paper-plane"></i>
+                <FaTelegramPlane style={{fontSize: 20+'px', marginTop: 3+'px'}}/>
                 <span className="send-text">SEND</span>
               </div>
             </button>
