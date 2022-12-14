@@ -8,12 +8,13 @@ export const ContactContainer = styled.div`
     width: 100%;
     height: 600px;
   }
-    @media screen and (max-width: 850px) {
+  @media screen and (max-width: 850px) {
     .contact-wrapper {
       display: flex;
       flex-direction: column;
     }
-    .direct-contact-container, .form-horizontal {
+    .direct-contact-container,
+    .form-horizontal {
       margin: 0 auto;
     }
 
@@ -34,17 +35,19 @@ export const ContactContainer = styled.div`
   }
 
   @media screen and (max-width: 569px) {
-
-    .direct-contact-container, .form-wrapper {
+    .direct-contact-container,
+    .form-wrapper {
       float: none;
       margin: 0 auto;
     }
-    .form-control, textarea {
-
+    .form-control,
+    textarea {
       margin: 0 auto;
     }
 
-    .name, .email, textarea {
+    .name,
+    .email,
+    textarea {
       width: 280px;
     }
 
@@ -66,7 +69,6 @@ export const ContactContainer = styled.div`
       height: 55px;
       line-height: 55px;
     }
-
   }
 
   @media screen and (max-width: 410px) {

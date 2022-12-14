@@ -7,20 +7,18 @@ import {
   DirectContactContainer,
 } from "./contactStyles";
 import { MdPlace, MdPhone } from "react-icons/md";
-import { FaEnvelope, FaTelegramPlane } from "react-icons/fa";
+import { FaEnvelope, FaTelegramPlane, FaTelegram } from "react-icons/fa";
+import { BsWhatsapp } from "react-icons/bs";
 import { ThemeContext } from "./../../App";
 
 export const ContactMePage = (props) => {
   const { setTheme, theme } = useContext(ThemeContext);
 
-
-  // https://codepen.io/bobbykorec/pen/qOGbyr?editors=0110
-
   return (
     <ContactContainer>
       <section id="contact">
-        <ContactMe>Contact</ContactMe>
-
+        <ContactMe>Contact Me</ContactMe>
+        <FaTelegram style={{color: '#02b2d6', fontSize: 50+'px'}}/>
         <ContactWrapper>
           <form id="contact-form" className="form-horizontal" role="form">
             <div className="form-group">
