@@ -8,6 +8,74 @@ export const ContactContainer = styled.div`
     width: 100%;
     height: 600px;
   }
+  @media screen and (max-width: 850px) {
+    .contact-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    .direct-contact-container,
+    .form-horizontal {
+      margin: 0 auto;
+    }
+
+    .direct-contact-container {
+      margin-top: 60px;
+      max-width: 300px;
+    }
+    .social-media-list li {
+      height: 60px;
+      width: 60px;
+      line-height: 60px;
+    }
+    .social-media-list li:after {
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+    }
+  }
+
+  @media screen and (max-width: 569px) {
+    .direct-contact-container,
+    .form-wrapper {
+      float: none;
+      margin: 0 auto;
+    }
+    .form-control,
+    textarea {
+      margin: 0 auto;
+    }
+
+    .name,
+    .email,
+    textarea {
+      width: 280px;
+    }
+
+    .direct-contact-container {
+      margin-top: 60px;
+      max-width: 280px;
+    }
+    .social-media-list {
+      left: 0;
+    }
+    .social-media-list li {
+      height: 55px;
+      width: 55px;
+      line-height: 55px;
+      font-size: 2rem;
+    }
+    .social-media-list li:after {
+      width: 55px;
+      height: 55px;
+      line-height: 55px;
+    }
+  }
+
+  @media screen and (max-width: 410px) {
+    .send-button {
+      width: 99%;
+    }
+  }
 `;
 
 export const ContactMe = styled.span`
@@ -16,7 +84,8 @@ export const ContactMe = styled.span`
   font-size: 47px;
   transform: rotate(-7deg);
   margin: 15px auto 50px auto;
-  text-align: center;
+  display: flex;
+  justify-content: center;
   color: rgb(45, 45, 45);
 `;
 
@@ -37,10 +106,14 @@ export const ContactWrapper = styled.div`
 
   .form-control,
   textarea {
-    max-width: 400px;
+    width: 400px;
     background-color: ${({ theme }) => theme.bg};
-    color: #fff;
+    color: ${({ theme }) => theme.text};
     letter-spacing: 1px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid ${({ theme }) => theme.bg};
+    border-radius: 4px;
   }
 
   .send-button {
@@ -49,6 +122,10 @@ export const ContactWrapper = styled.div`
     width: 400px;
     overflow: hidden;
     transition: all 0.2s ease-in-out;
+    background-color: ${({ theme }) => theme.bg};
+    color: ${({ theme }) => theme.text};
+    border: 1px solid ${({ theme }) => theme.bg};
+    border-radius: 4px;
   }
 
   .alt-send-button {
@@ -115,71 +192,3 @@ export const DirectContactContainer = styled.div`
     text-decoration: none;
   }
 `;
-
-//   /* Begin Media Queries*/
-//   @media screen and (max-width: 850px) {
-//     .contact-wrapper {
-//       display: flex;
-//       flex-direction: column;
-//     }
-//     .direct-contact-container, .form-horizontal {
-//       margin: 0 auto;
-//     }
-
-//     .direct-contact-container {
-//       margin-top: 60px;
-//       max-width: 300px;
-//     }
-//     .social-media-list li {
-//       height: 60px;
-//       width: 60px;
-//       line-height: 60px;
-//     }
-//     .social-media-list li:after {
-//       width: 60px;
-//       height: 60px;
-//       line-height: 60px;
-//     }
-//   }
-
-//   @media screen and (max-width: 569px) {
-
-//     .direct-contact-container, .form-wrapper {
-//       float: none;
-//       margin: 0 auto;
-//     }
-//     .form-control, textarea {
-
-//       margin: 0 auto;
-//     }
-
-//     .name, .email, textarea {
-//       width: 280px;
-//     }
-
-//     .direct-contact-container {
-//       margin-top: 60px;
-//       max-width: 280px;
-//     }
-//     .social-media-list {
-//       left: 0;
-//     }
-//     .social-media-list li {
-//       height: 55px;
-//       width: 55px;
-//       line-height: 55px;
-//       font-size: 2rem;
-//     }
-//     .social-media-list li:after {
-//       width: 55px;
-//       height: 55px;
-//       line-height: 55px;
-//     }
-
-//   }
-
-//   @media screen and (max-width: 410px) {
-//     .send-button {
-//       width: 99%;
-//     }
-//   }

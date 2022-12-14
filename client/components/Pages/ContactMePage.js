@@ -7,7 +7,8 @@ import {
   DirectContactContainer,
 } from "./contactStyles";
 import { MdPlace, MdPhone } from "react-icons/md";
-import { FaEnvelope } from "react-icons/fa";
+import { FaEnvelope, FaTelegramPlane, FaTelegram } from "react-icons/fa";
+import { BsWhatsapp } from "react-icons/bs";
 import { ThemeContext } from "./../../App";
 
 export const ContactMePage = (props) => {
@@ -16,8 +17,8 @@ export const ContactMePage = (props) => {
   return (
     <ContactContainer>
       <section id="contact">
-        <ContactMe>Contact</ContactMe>
-
+        <ContactMe>Contact Me</ContactMe>
+        <FaTelegram style={{color: '#02b2d6', fontSize: 50+'px'}}/>
         <ContactWrapper>
           <form id="contact-form" className="form-horizontal" role="form">
             <div className="form-group">
@@ -63,7 +64,7 @@ export const ContactMePage = (props) => {
               value="SEND"
             >
               <div className="alt-send-button">
-                <i className="fa fa-paper-plane"></i>
+                <FaTelegramPlane style={{fontSize: 20+'px', marginTop: 3+'px'}}/>
                 <span className="send-text">SEND</span>
               </div>
             </button>
