@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { connect } from "react-redux";
 import {
   ContactContainer,
@@ -14,14 +14,22 @@ import { ThemeContext } from "./../../App";
 
 export const ContactMePage = (props) => {
   const { setTheme, theme } = useContext(ThemeContext);
+  const [ name, setName ] = useState("");
+  const [ email, setEmail ] = useState("");
+  const [ message, setMessage ] = useState("");
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    e.target.elements.name.value = '';
+    e.target.elements.email.value = '';
+    e.target.elements.message.value = '';
+  }
   return (
     <ContactContainer>
       <section id="contact">
         <ContactMe>Contact Me</ContactMe>
-        
         <ContactWrapper>
-          <form id="contact-form" className="form-horizontal" role="form">
+          <form id="contact-form" className="form-horizontal" role="form" onSubmit={handleSubmit}>
             <div className="form-group">
               <div className="col-sm-12">
                 <input
@@ -30,7 +38,8 @@ export const ContactMePage = (props) => {
                   id="name"
                   placeholder="NAME"
                   name="name"
-                  value=""
+                  value={name}
+                  onChange={(e)=>setName(e.target.value)}
                   required
                 />
               </div>
@@ -44,7 +53,8 @@ export const ContactMePage = (props) => {
                   id="email"
                   placeholder="EMAIL"
                   name="email"
-                  value=""
+                  value={email}
+                  onChange={(e)=>setEmail(e.target.value)}
                   required
                 />
               </div>
@@ -54,7 +64,9 @@ export const ContactMePage = (props) => {
               className="form-control"
               rows="10"
               placeholder="MESSAGE"
-              name="message"
+              name='message'
+              value={message}
+              onChange={(e)=>setMessage(e.target.value)}
               required
             ></textarea>
 
