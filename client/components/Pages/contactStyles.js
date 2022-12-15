@@ -89,6 +89,15 @@ export const ContactMe = styled.span`
   color: rgb(45, 45, 45);
 `;
 
+export const SNSWrapper = styled.div`
+  height: 70px;
+  margin: 30px auto ;
+  text-align: center;
+  svg {
+    margin: 0 30px;
+  }
+`;
+
 export const ContactWrapper = styled.div`
   display: flex;
   flex-direction: row;

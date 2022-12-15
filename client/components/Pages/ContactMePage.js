@@ -5,6 +5,7 @@ import {
   ContactMe,
   ContactWrapper,
   DirectContactContainer,
+  SNSWrapper,
 } from "./contactStyles";
 import { MdPlace, MdPhone } from "react-icons/md";
 import { FaEnvelope, FaTelegramPlane, FaTelegram } from "react-icons/fa";
@@ -18,7 +19,7 @@ export const ContactMePage = (props) => {
     <ContactContainer>
       <section id="contact">
         <ContactMe>Contact Me</ContactMe>
-        <FaTelegram style={{color: '#02b2d6', fontSize: 50+'px'}}/>
+        
         <ContactWrapper>
           <form id="contact-form" className="form-horizontal" role="form">
             <div className="form-group">
@@ -64,7 +65,9 @@ export const ContactMePage = (props) => {
               value="SEND"
             >
               <div className="alt-send-button">
-                <FaTelegramPlane style={{fontSize: 20+'px', marginTop: 3+'px'}}/>
+                <FaTelegramPlane
+                  style={{ fontSize: 20 + "px", marginTop: 3 + "px" }}
+                />
                 <span className="send-text">SEND</span>
               </div>
             </button>
@@ -76,8 +79,8 @@ export const ContactMePage = (props) => {
                 <MdPlace
                   style={
                     theme === "dark"
-                      ? { color: "rgb(210,210,210)", fontSize: 26+"px" }
-                      : { color: "rgb(45,45,45)", fontSize: 26+"px" }
+                      ? { color: "rgb(210,210,210)", fontSize: 26 + "px" }
+                      : { color: "rgb(45,45,45)", fontSize: 26 + "px" }
                   }
                 />
                 <span className="contact-text place">Brooklyn, NY</span>
@@ -87,8 +90,8 @@ export const ContactMePage = (props) => {
                 <MdPhone
                   style={
                     theme === "dark"
-                      ? { color: "rgb(210,210,210)", fontSize: 26+"px" }
-                      : { color: "rgb(45,45,45)", fontSize: 26+"px" }
+                      ? { color: "rgb(210,210,210)", fontSize: 26 + "px" }
+                      : { color: "rgb(45,45,45)", fontSize: 26 + "px" }
                   }
                 />
                 <span className="contact-text phone">
@@ -102,8 +105,8 @@ export const ContactMePage = (props) => {
                 <FaEnvelope
                   style={
                     theme === "dark"
-                      ? { color: "rgb(210,210,210)", fontSize: 26+"px" }
-                      : { color: "rgb(45,45,45)", fontSize: 26+"px" }
+                      ? { color: "rgb(210,210,210)", fontSize: 26 + "px" }
+                      : { color: "rgb(45,45,45)", fontSize: 26 + "px" }
                   }
                 />
                 <span className="contact-text gmail">
@@ -113,7 +116,28 @@ export const ContactMePage = (props) => {
                 </span>
               </li>
             </ul>
+            <SNSWrapper>
+          <a
+            href="https://t.me/andstatik"
+            target="_blank"
+            title="Message me via Telegram"
+            rel="noopener noreferrer"
+          >
+            <FaTelegram style={{ color: "#02b2d6", fontSize: 70 + "px" }} />
+          </a>
+          <a
+            href="https://api.whatsapp.com/send?phone=19294613168"
+            target="_blank"
+            title="Message me via WhatsApp"
+            rel="noopener noreferrer"
+          >
+            <BsWhatsapp
+              style={{ color: "rgb(57, 230, 60)", fontSize: 70 + "px" }}
+            />
+          </a>
+        </SNSWrapper>
           </DirectContactContainer>
+          
         </ContactWrapper>
       </section>
     </ContactContainer>
