@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux";
 import {
   ContactContainer,
   ContactMe,
@@ -15,26 +15,34 @@ import { sendContactThunk } from "../../redux/contactForm";
 
 export const ContactMePage = (props) => {
   const { setTheme, theme } = useContext(ThemeContext);
-  const [ name, setName ] = useState("");
-  const [ email, setEmail ] = useState("");
-  const [ message, setMessage ] = useState("");
-  const contactForm = useSelector((state) => state.contactForm)
-  const dispatch = useDispatch()
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const contactForm = useSelector((state) => state.contactForm);
+  const dispatch = useDispatch();
 
   function handleSubmit(e) {
     e.preventDefault();
     dispatch(sendContactThunk(name, email, message));
-    e.target.elements.name.value = '';
-    e.target.elements.email.value = '';
-    e.target.elements.message.value = '';
+    e.target.elements.name.value = "";
+    e.target.elements.email.value = "";
+    e.target.elements.message.value = "";
   }
   return (
     <ContactContainer>
       <section id="contact">
         <ContactMe>Contact Me</ContactMe>
-        <span style={{color: 'rgb(45,45,45)', fontSize: 18+'px'}}>Please either message me using the links on the right, or fill out this form 😀</span>
+        <span style={{ color: "rgb(45,45,45)", fontSize: 18 + "px" }}>
+          Please either message me using the links on the right, or fill out
+          this form 😀
+        </span>
         <ContactWrapper>
-          <form id="contact-form" className="form-horizontal" role="form" onSubmit={handleSubmit}>
+          <form
+            id="contact-form"
+            className="form-horizontal"
+            role="form"
+            onSubmit={handleSubmit}
+          >
             <div className="form-group">
               <div className="col-sm-12">
                 <input
@@ -44,7 +52,7 @@ export const ContactMePage = (props) => {
                   placeholder="NAME"
                   name="name"
                   value={name}
-                  onChange={(e)=>setName(e.target.value)}
+                  onChange={(e) => setName(e.target.value)}
                   required
                 />
               </div>
@@ -59,7 +67,7 @@ export const ContactMePage = (props) => {
                   placeholder="EMAIL"
                   name="email"
                   value={email}
-                  onChange={(e)=>setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
               </div>
@@ -69,9 +77,9 @@ export const ContactMePage = (props) => {
               className="form-control"
               rows="10"
               placeholder="MESSAGE"
-              name='message'
+              name="message"
               value={message}
-              onChange={(e)=>setMessage(e.target.value)}
+              onChange={(e) => setMessage(e.target.value)}
               required
             ></textarea>
 
@@ -88,6 +96,17 @@ export const ContactMePage = (props) => {
                 <span className="send-text">SEND</span>
               </div>
             </button>
+            {contactForm && (
+              <div
+                style={{
+                  textAlign: "center",
+                  fontSize: "14" + "px",
+                  width: "400" + "px",
+                }}
+              >
+                {contactForm}
+              </div>
+            )}
           </form>
 
           <DirectContactContainer>
@@ -134,27 +153,26 @@ export const ContactMePage = (props) => {
               </li>
             </ul>
             <SNSWrapper>
-          <a
-            href="https://t.me/andstatik"
-            target="_blank"
-            title="Message me via Telegram"
-            rel="noopener noreferrer"
-          >
-            <FaTelegram style={{ color: "#02b2d6", fontSize: 70 + "px" }} />
-          </a>
-          <a
-            href="https://api.whatsapp.com/send?phone=19294613168"
-            target="_blank"
-            title="Message me via WhatsApp"
-            rel="noopener noreferrer"
-          >
-            <BsWhatsapp
-              style={{ color: "rgb(57, 230, 60)", fontSize: 70 + "px" }}
-            />
-          </a>
-        </SNSWrapper>
+              <a
+                href="https://t.me/andstatik"
+                target="_blank"
+                title="Message me via Telegram"
+                rel="noopener noreferrer"
+              >
+                <FaTelegram style={{ color: "#02b2d6", fontSize: 70 + "px" }} />
+              </a>
+              <a
+                href="https://api.whatsapp.com/send?phone=19294613168"
+                target="_blank"
+                title="Message me via WhatsApp"
+                rel="noopener noreferrer"
+              >
+                <BsWhatsapp
+                  style={{ color: "rgb(57, 230, 60)", fontSize: 70 + "px" }}
+                />
+              </a>
+            </SNSWrapper>
           </DirectContactContainer>
-          
         </ContactWrapper>
       </section>
     </ContactContainer>
