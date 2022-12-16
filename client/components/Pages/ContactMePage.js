@@ -28,6 +28,7 @@ export const ContactMePage = (props) => {
     <ContactContainer>
       <section id="contact">
         <ContactMe>Contact Me</ContactMe>
+        <span style={{color: 'rgb(45,45,45)', fontSize: 18+'px'}}>Please either message me using the links on the right, or fill out this form 😀</span>
         <ContactWrapper>
           <form id="contact-form" className="form-horizontal" role="form" onSubmit={handleSubmit}>
             <div className="form-group">
