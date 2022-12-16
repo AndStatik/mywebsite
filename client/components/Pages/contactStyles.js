@@ -4,9 +4,10 @@ import { btnReset, v } from "../../styles/variables";
 
 export const ContactContainer = styled.div`
   width: 100%;
+  text-align: center;
   #contact {
     width: 100%;
-    height: 600px;
+    height: 700px;
   }
   @media screen and (max-width: 850px) {
     .contact-wrapper {
@@ -89,12 +90,21 @@ export const ContactMe = styled.span`
   color: rgb(45, 45, 45);
 `;
 
+export const SNSWrapper = styled.div`
+  height: 70px;
+  margin: 30px auto ;
+  text-align: center;
+  svg {
+    margin: 0 30px;
+  }
+`;
+
 export const ContactWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px 20px 20px;
   position: relative;
   max-width: 840px;
 
@@ -156,6 +166,7 @@ export const DirectContactContainer = styled.div`
     list-style-type: none;
     margin-left: -30px;
     padding-right: 20px;
+    text-align: left;
   }
 
   .list-item {
