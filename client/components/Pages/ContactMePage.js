@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { connect } from "react-redux";
+import { useDispatch, useSelector } from "react-redux"
 import {
   ContactContainer,
   ContactMe,
@@ -11,15 +11,19 @@ import { MdPlace, MdPhone } from "react-icons/md";
 import { FaEnvelope, FaTelegramPlane, FaTelegram } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
 import { ThemeContext } from "./../../App";
+import { sendContactThunk } from "../../redux/contactForm";
 
 export const ContactMePage = (props) => {
   const { setTheme, theme } = useContext(ThemeContext);
   const [ name, setName ] = useState("");
   const [ email, setEmail ] = useState("");
   const [ message, setMessage ] = useState("");
+  const contactForm = useSelector((state) => state.contactForm)
+  const dispatch = useDispatch()
 
   function handleSubmit(e) {
     e.preventDefault();
+    dispatch(sendContactThunk(name, email, message));
     e.target.elements.name.value = '';
     e.target.elements.email.value = '';
     e.target.elements.message.value = '';
@@ -157,11 +161,4 @@ export const ContactMePage = (props) => {
   );
 };
 
-/**
- * CONTAINER
- */
-const mapState = (state) => {
-  return {};
-};
-
-export default connect(mapState)(ContactMePage);
+export default ContactMePage;
