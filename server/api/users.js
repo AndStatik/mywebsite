@@ -38,7 +38,7 @@ router.put("/contact", async (req, res, next) => {
       subject: `Thank you for reaching out, ${name}!`,
       html: emailGuestHTML
     })
-    res.send(updatedItems)
+    res.status(200).send("Thank you! I will get back to you asap! 🙂")
   } catch (error) {
     console.log(error)
     next(error)

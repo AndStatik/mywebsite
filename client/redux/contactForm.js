@@ -38,8 +38,6 @@ export default function contactFormReducer(state = initialState, action) {
           }
         : {
             ...state,
-            cartItems: [],
-            updatedPrices: [],
             error: "",
           }
     default:

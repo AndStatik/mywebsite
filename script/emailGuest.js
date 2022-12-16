@@ -1,41 +1,5 @@
 function emailGuest(itemInfo) {
-    // console.log(itemInfo)
-    const { iNames, iQuant, iImgs, iPrice, iSubT, iTotal } = itemInfo;
-    let itemTable = iNames
-        .map((item, i) => (
-          `<table class="column">
-            <tr>
-                <td class="padding">
-                    <table class="content">
-                        <tr>
-                            <td>
-                                <p style="
-                                    text-align: center;
-                                    font-family: Baskerville, Times,'Times New Roman',serif;
-                                    font-size: 20px;
-                                    font-variant: small-caps;
-                                    font-weight: bold;
-                                ">`+item+`</p>
-                                <img src=`+iImgs[i]+` width="130" style="max-width: 130px" alt=`+item+`/>
-                                <h4>UNIT PRICE: $`+iPrice[i]+`</h4>
-                                <p>QUANTITY: `+iQuant[i]+`</p>
-                                <h4>SUBPRICE: $`+iSubT[i]+`</h4>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-          </table>`
-        ));
-    let totalTable = `
-        <table class="content">
-            <tr>
-                <td class="thankyou">
-                    <h3>TOTAL PRICE: $${(iTotal).toFixed(2)}</h3>
-                </td>
-            </tr>
-        </table>
-    `;
+    console.log(itemInfo)
     return `
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -244,8 +208,6 @@ function emailGuest(itemInfo) {
                 <p style="font-weight: bold; font-size: 17px">
                     Your order contains the following item(s):
                 </p>
-                ${itemTable}
-                ${totalTable}
             </td>
         </tr>
         </table>
