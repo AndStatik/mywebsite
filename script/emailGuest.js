@@ -1,42 +1,6 @@
 function emailGuest(itemInfo) {
-    // console.log(itemInfo)
-    const { iNames, iQuant, iImgs, iPrice, iSubT, iTotal } = itemInfo;
-    let itemTable = iNames
-        .map((item, i) => (
-          `<table class="column">
-            <tr>
-                <td class="padding">
-                    <table class="content">
-                        <tr>
-                            <td>
-                                <p style="
-                                    text-align: center;
-                                    font-family: Baskerville, Times,'Times New Roman',serif;
-                                    font-size: 20px;
-                                    font-variant: small-caps;
-                                    font-weight: bold;
-                                ">`+item+`</p>
-                                <img src=`+iImgs[i]+` width="130" style="max-width: 130px" alt=`+item+`/>
-                                <h4>UNIT PRICE: $`+iPrice[i]+`</h4>
-                                <p>QUANTITY: `+iQuant[i]+`</p>
-                                <h4>SUBPRICE: $`+iSubT[i]+`</h4>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-          </table>`
-        ));
-    let totalTable = `
-        <table class="content">
-            <tr>
-                <td class="thankyou">
-                    <h3>TOTAL PRICE: $${(iTotal).toFixed(2)}</h3>
-                </td>
-            </tr>
-        </table>
-    `;
-    return `
+  const { name, email, message } = itemInfo;
+  return `
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -65,7 +29,7 @@ function emailGuest(itemInfo) {
         padding-bottom: 60px;
     }
     .main {
-        background-color: #ffffff;
+        background-color: rgb(230,236,244);
         margin: 0 auto;
         width: 100%;
         max-width: 600px;
@@ -154,7 +118,7 @@ function emailGuest(itemInfo) {
 <table class="main" width="100%">
     <!-- TOP BORDER -->
     <tr>
-    <td height="8" style="background-color: #fc9700"></td>
+    <td height="8" style="background-color: rgb(202, 223, 235)"></td>
     </tr>
     <!-- LOGO SECTION -->
     <tr>
@@ -165,12 +129,12 @@ function emailGuest(itemInfo) {
         <table style="width: 100%; max-width: 300px; display: inline-block; vertical-align: top;">
                 <tr>
                 <td style="padding: 0 62px 10px">
-                    <a href="https://grace-pokebay.herokuapp.com/"
+                    <a href="https://andrey-statkevskiy.com/"
                     ><img
-                        src="https://i.ibb.co/3cRCmhN/logo.png"
+                        src="https://i.ibb.co/B42ZYk7/logo1.png"
                         alt="logo"
                         width="100"
-                        title="PokEbay"
+                        title="Andrey Statkevskiy - Personal Website"
                     /></a>
                 </td>
                 </tr>
@@ -178,35 +142,35 @@ function emailGuest(itemInfo) {
             <table style="width: 100%; max-width: 300px; display: inline-block; vertical-align: top;">
                 <tr>
                 <td style="padding: 10px 72px">
-                    <a href="#"
+                    <a href="https://github.com/AndStatik"
                     ><img
-                        src="https://i.ibb.co/f10v8MN/black-facebook.png"
-                        alt=""
-                        width="30"
-                    /></a>
-                    <a href="#"
-                    ><img
-                        src="https://i.ibb.co/B6dCFFP/black-twitter.png"
-                        alt=""
-                        width="30"
-                    /></a>
-                    <a href="#"
-                    ><img
-                        src="https://i.ibb.co/ChQxBmh/black-youtube.png"
-                        alt=""
-                        width="30"
+                        src="https://cdn.onlinewebfonts.com/svg/img_44605.png"
+                        alt="GitHub"
+                        width="24"
                     /></a>
                     <a href="https://www.linkedin.com/in/andrey-statkevskiy/"
                     ><img
                         src="https://i.ibb.co/tBSQsSK/black-linkedin.png"
-                        alt=""
+                        alt="LinkedIn"
                         width="30"
                     /></a>
                     <a href="https://www.instagram.com/andstatik/"
                     ><img
                         src="https://i.ibb.co/jy0GK47/black-instagram.png"
-                        alt=""
+                        alt="Instagram"
                         width="30"
+                    /></a>
+                    <a href="https://www.youtube.com/@andstatik"
+                    ><img
+                        src="https://i.ibb.co/ChQxBmh/black-youtube.png"
+                        alt="YouTube"
+                        width="30"
+                    /></a>
+                    <a href="https://www.twitch.tv/andstatik"
+                    ><img
+                        src="http://cdn.onlinewebfonts.com/svg/img_336434.png"
+                        alt="Twitch"
+                        width="24"
                     /></a>
                 </td>
                 </tr>
@@ -219,14 +183,14 @@ function emailGuest(itemInfo) {
     <!-- BANNER IMAGE -->
     <tr class="thankyou" style="display: flex; margin: auto;">
     <td style="width:100%; text-align:center">
-      <p style="font-weight: bold; font-size: 26px;">
-        Your order has been confirmed!
+      <p style="font-weight: bold; font-size: 26px; color: rgb(45,45,45);">
+        Thank you for your message!
       </p>
-        <a href="https://grace-pokebay.herokuapp.com/" class="button" style="background-color: #ffffff;"
+        <a href="https://andrey-statkevskiy.com/" class="button" style="background-color: rgb(230,236,244);"
         >
             <img
-            src="https://storage.googleapis.com/nianticweb-media/pokemongo/helper/sticker_nigiyaka_16_0508.png"
-            width="300"
+            src="https://img.listemoji.com/thumbs/240/apple/237/person-raising-both-hands-in-celebration_1f64c.png"
+            width="160"
             style="max-width: 100%; 
                 margin: auto;
                 display: block;"
@@ -242,34 +206,9 @@ function emailGuest(itemInfo) {
         <tr>
             <td class="three-columns">
                 <p style="font-weight: bold; font-size: 17px">
-                    Your order contains the following item(s):
+                    Your message: 
                 </p>
-                ${itemTable}
-                ${totalTable}
-            </td>
-        </tr>
-        </table>
-    </td>
-    </tr>
-    <!-- TITLE, TEXT & BUTTON -->
-    <tr>
-    <td style="padding: 15px 0 50px; background-color: #99cfff"">
-        <table width="100%">
-        <tr>
-            <td style="text-align: center; padding: 15px">
-            <p style="font-size: 20px; font-weight: bold">
-                Not a member yet?
-            </p>
-            <p
-                style="
-                line-height: 23px;
-                font-size: 15px;
-                padding: 5px 0 15px;
-                "
-            >
-                Become a member for free, using the button below!
-            </p>
-            <a href="https://grace-pokebay.herokuapp.com/signup" class="button-dark">Sign-Up</a>
+                <p style="font-size: 15px; text-align: left; margin: auto 60px;">${message}</p>
             </td>
         </tr>
         </table>
@@ -277,48 +216,48 @@ function emailGuest(itemInfo) {
     </tr>
     <!-- FOOTER SECTION -->
     <tr>
-    <td style="background-color: #271538">
+    <td style="background-color: rgb(202, 223, 235)">
         <table width="100%">
         <tr>
             <td
-            style="text-align: center; padding: 45px 20px; color: #ffffff"
+            style="text-align: center; padding: 45px 20px; color: rgb(45, 45, 45)"
             >
-            <a href="https://grace-pokebay.herokuapp.com/"
-                ><img src="https://i.ibb.co/3cRCmhN/logo.png" width="180"
+            <a href="https://andrey-statkevskiy.com/"
+                ><img src="https://i.ibb.co/B42ZYk7/logo1.png" width="180"
             /></a>
-            <p style="padding: 10px">PokeBay</p>
+            <p style="padding: 10px; font-weight: bold; font-size: 15px;">Andrey Statkevskiy</p>
             <p style="padding: 10px">
-                123 Street Road, City, State 55555
+                Brooklyn, NY
             </p>
-            <a href="#"
-                ><img
-                src="https://i.ibb.co/0BtKbbs/white-facebook.png"
-                alt=""
-                width="30"
-            /></a>
-            <a href="#"
-                ><img
-                src="https://i.ibb.co/5xDjDcy/white-twitter.png"
-                alt=""
-                width="30"
-            /></a>
-            <a href="#"
-                ><img
-                src="https://i.ibb.co/5Y2Zn7R/white-youtube.png"
-                alt=""
-                width="30"
+            <a href="https://github.com/AndStatik"
+            ><img
+                src="https://cdn.onlinewebfonts.com/svg/img_44605.png"
+                alt="GitHub"
+                width="24"
             /></a>
             <a href="https://www.linkedin.com/in/andrey-statkevskiy/"
-                ><img
-                src="https://i.ibb.co/JsZM3yp/white-linkedin.png"
-                alt=""
+            ><img
+                src="https://i.ibb.co/tBSQsSK/black-linkedin.png"
+                alt="LinkedIn"
                 width="30"
             /></a>
             <a href="https://www.instagram.com/andstatik/"
-                ><img
-                src="https://i.ibb.co/ZM8pcrn/white-instagram.png"
-                alt=""
+            ><img
+                src="https://i.ibb.co/jy0GK47/black-instagram.png"
+                alt="Instagram"
                 width="30"
+            /></a>
+            <a href="https://www.youtube.com/@andstatik"
+            ><img
+                src="https://i.ibb.co/ChQxBmh/black-youtube.png"
+                alt="YouTube"
+                width="30"
+            /></a>
+            <a href="https://www.twitch.tv/andstatik"
+            ><img
+                src="http://cdn.onlinewebfonts.com/svg/img_336434.png"
+                alt="Twitch"
+                width="24"
             /></a>
             <p style="padding: 10px">SUBSCRIBE</p>
             </td>
@@ -330,7 +269,7 @@ function emailGuest(itemInfo) {
 </center>
 </body>
 </html>
-`
+`;
 }
 
 module.exports = emailGuest;
