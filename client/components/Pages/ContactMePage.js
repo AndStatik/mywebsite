@@ -24,15 +24,15 @@ export const ContactMePage = (props) => {
   function handleSubmit(e) {
     e.preventDefault();
     dispatch(sendContactThunk(name, email, message));
-    e.target.elements.name.value = "";
-    e.target.elements.email.value = "";
-    e.target.elements.message.value = "";
+    setName("");
+    setEmail("");
+    setMessage("");
   }
   return (
     <ContactContainer>
       <section id="contact">
         <ContactMe>Contact Me</ContactMe>
-        <span style={{ color: "rgb(45,45,45)", fontSize: 18 + "px" }}>
+        <span id="message">
           Please either message me using the links on the right, or fill out
           this form 😀
         </span>

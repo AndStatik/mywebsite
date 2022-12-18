@@ -9,6 +9,10 @@ export const ContactContainer = styled.div`
     width: 100%;
     height: 700px;
   }
+  #message {
+    color: ${({ theme }) => theme.text};
+    font-size: 18px;
+  }
   @media screen and (max-width: 850px) {
     .contact-wrapper {
       display: flex;
