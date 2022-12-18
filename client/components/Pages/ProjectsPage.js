@@ -110,6 +110,15 @@ export const ProjectsPage = (props) => {
         disabled1: false,
         image1: "virtalink.jpg",
       },
+      {
+        category: "Work",
+        start: "2022-05-01",
+        end: "2022-12-31",
+        color: "rgb(37,84,124)", //navy
+        task: "Working On My Portfolio Projects",
+        disabled1: false,
+        image1: "logo.png",
+      },
     ];
 
     chart.dateFormatter.dateFormat = "yyyy-MM-dd";
