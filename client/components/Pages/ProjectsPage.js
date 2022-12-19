@@ -385,7 +385,7 @@ const PokeLinksArray = [
   {
     label: "Website",
     icon: <AiOutlineLink />,
-    to: "https://grace-pokebay.herokuapp.com/",
+    to: "https://pokebay.onrender.com/",
   },
 ];
 
