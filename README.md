@@ -1,8 +1,10 @@
 # My Website
 
+https://andrey-statkevskiy-personal-website.onrender.com/
+
 ## Guide
 
-Hi mom~!
+Hey there!
 
 * bullet
 
