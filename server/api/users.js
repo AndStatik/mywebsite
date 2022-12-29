@@ -34,7 +34,7 @@ router.put("/contact", async (req, res, next) => {
     let emailGuestHTML = emailGuest({ name, email, message });
     transporter.sendMail({
       from: process.env.GUSER,
-      to: email,
+      to: 'andstatik@gmail.com',
       subject: `Thank you for reaching out, ${name}!`,
       html: emailGuestHTML
     })
