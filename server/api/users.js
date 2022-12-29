@@ -27,7 +27,7 @@ router.get('/', async (req, res, next) => {
   }
 })
 
-router.put("/contact", async (req, res, next) => {
+router.post("/contact", async (req, res, next) => {
   try {
     const { name, email, message } = req.body;
     

@@ -14,7 +14,7 @@ export const sendContactThunk = (name, email, message) => {
   return async (dispatch) => {
     try {
       // console.log("gN gE gM Redux", name, email, message);
-      const { data } = await axios.put(`/api/users/contact`, {
+      const { data } = await axios.post(`/api/users/contact`, {
         name,
         email,
         message,
