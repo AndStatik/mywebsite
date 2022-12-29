@@ -206,7 +206,7 @@ function emailGuest(itemInfo) {
         <tr>
             <td class="three-columns">
                 <p style="font-weight: bold; font-size: 17px">
-                    Your message: 
+                    Message from ${name} at ${email}: 
                 </p>
                 <p style="font-size: 15px; text-align: left; margin: auto 60px;">${message}</p>
             </td>
