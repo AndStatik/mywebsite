@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   ContactContainer,
@@ -12,18 +12,39 @@ import { FaEnvelope, FaTelegramPlane, FaTelegram } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
 import { ThemeContext } from "./../../App";
 import { sendContactThunk } from "../../redux/contactForm";
+import emailjs from "@emailjs/browser";
 
 export const ContactMePage = (props) => {
   const { setTheme, theme } = useContext(ThemeContext);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const form = useRef();
   const contactForm = useSelector((state) => state.contactForm);
   const dispatch = useDispatch();
 
   function handleSubmit(e) {
     e.preventDefault();
-    dispatch(sendContactThunk(name, email, message));
+    // dispatch(sendContactThunk(name, email, message));
+    emailjs
+      .send(
+        "service_2u9ozag",
+        "template_oxocvq8",
+        {
+          name, 
+          email,
+          message
+        },
+        "gXaAJmRV_M5oJUG7f"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
     setName("");
     setEmail("");
     setMessage("");
@@ -38,6 +59,7 @@ export const ContactMePage = (props) => {
         </span>
         <ContactWrapper>
           <form
+            ref={form}
             id="contact-form"
             className="form-horizontal"
             role="form"
