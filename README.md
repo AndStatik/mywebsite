@@ -1,6 +1,6 @@
 # My Website
 
-https://andrey-statkevskiy-personal-website.onrender.com/
+https://andrey-statkevskiy.com/
 
 ## Guide
 
