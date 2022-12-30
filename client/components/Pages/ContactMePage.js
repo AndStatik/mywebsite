@@ -36,14 +36,6 @@ export const ContactMePage = (props) => {
           message
         },
         "gXaAJmRV_M5oJUG7f"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
       );
     setName("");
     setEmail("");
