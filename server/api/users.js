@@ -29,7 +29,7 @@ router.get('/', async (req, res, next) => {
 
 router.post("/contact", async (req, res, next) => {
   try {
-    const { name, email, message } = req.body;
+    // const { name, email, message } = req.body;
     
     // let emailGuestHTML = emailGuest({ name, email, message });
     // transporter.sendMail({
@@ -38,7 +38,7 @@ router.post("/contact", async (req, res, next) => {
     //   subject: `${name} messaged you from your personal website!`,
     //   html: emailGuestHTML
     // })
-    
+
     res.send("Thank you! I will get back to you asap! 🙂")
   } catch (error) {
     console.log(error)
