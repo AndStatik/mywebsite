@@ -13,13 +13,13 @@ export const sendContactThunk = (name, email, message) => {
   // const { guestName, guestEmail, itemQuantities, cartItems } = payload.checkoutInfo;
   return async (dispatch) => {
     try {
-      const { data } = await axios.post(`/api/users/contact`);
+      // const { data } = await axios.post(`/api/users/contact`);
       // console.log("gN gE gM Redux", name, email, message);
-      // const { data } = await axios.post(`/api/users/contact`, {
-      //   name,
-      //   email,
-      //   message,
-      // });
+      const { data } = await axios.post(`/api/users/contact`, {
+        name,
+        email,
+        message,
+      });
       // console.log("thunk", data)
       dispatch(sendContact(data));
     } catch (error) {
