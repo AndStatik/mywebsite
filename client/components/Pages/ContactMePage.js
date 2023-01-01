@@ -25,7 +25,7 @@ export const ContactMePage = (props) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // dispatch(sendContactThunk(name, email, message));
+    dispatch(sendContactThunk(name, email, message));
     emailjs
       .send(
         "service_2u9ozag",
