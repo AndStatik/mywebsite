@@ -13,6 +13,7 @@ import { BsWhatsapp } from "react-icons/bs";
 import { ThemeContext } from "./../../App";
 import { sendContactThunk } from "../../redux/contactForm";
 import emailjs from "@emailjs/browser";
+import Swal from 'sweetalert2'
 
 export const ContactMePage = (props) => {
   const { setTheme, theme } = useContext(ThemeContext);
@@ -26,20 +27,24 @@ export const ContactMePage = (props) => {
   function handleSubmit(e) {
     e.preventDefault();
     // dispatch(sendContactThunk(name, email, message));
-    emailjs
-      .send(
-        "service_2u9ozag",
-        "template_oxocvq8",
-        {
-          name, 
-          email,
-          message
-        },
-        "gXaAJmRV_M5oJUG7f"
-      );
+    emailjs.send(
+      "service_2u9ozag",
+      "template_oxocvq8",
+      {
+        name,
+        email,
+        message,
+      },
+      "gXaAJmRV_M5oJUG7f"
+    );
     setName("");
     setEmail("");
     setMessage("");
+    Swal.fire({
+      icon: 'success',
+      title: 'Success!',
+      text: 'I will get back to you asap 😉',
+    })
   }
   return (
     <ContactContainer>
