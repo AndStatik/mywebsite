@@ -4,12 +4,12 @@ import { connect } from "react-redux";
 /**
  * COMPONENT
  */
-export const BlogPage = (props) => {
+export const ServicesPage = (props) => {
   return (
     <div>
-      <h1>Blog Page</h1>
+      <h1>Services Page</h1>
       <img style={{width: 350+'px'}} src="workInProgress.png" alt="Work In Progress" />
-      <p>Someday I will start sharing my thoughts here</p>
+      <p>Someday I will list my services here</p>
     </div>
   );
 };
@@ -21,4 +21,4 @@ const mapState = (state) => {
   return {};
 };
 
-export default connect(mapState)(BlogPage);
+export default connect(mapState)(ServicesPage);
