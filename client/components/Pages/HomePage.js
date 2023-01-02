@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import { Link } from 'react-router-dom'
 import { Banner, Carousel, DescriptionCarousel, Gradient, Greet, Greet1, Greet2, Greet3, LabelCarousel, MyName, SingleCarousel, Welcome } from './homeStyles'
 
 /**
@@ -22,13 +23,13 @@ export const HomePage = props => {
       <br />
       <Carousel>
         {carouselArray.map(({ image, label, description, to }) => (
-          <a href={to} key={label}>
+          <Link to={to} key={label}> 
             <SingleCarousel className='singleCarousel'>
               <img src={image} alt={label} border="0" />
               <LabelCarousel>{label}</LabelCarousel>
               <DescriptionCarousel>{description}</DescriptionCarousel>
             </SingleCarousel>
-            </a>
+            </Link>
         ))}
       </Carousel>
     </>
