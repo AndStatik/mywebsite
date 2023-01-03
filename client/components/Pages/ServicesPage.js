@@ -66,7 +66,13 @@ export const ServicesPage = (props) => {
           </OverlayTurn>
         </SingleService>
       </Services>
-      <p style={{textDecoration: "overline rgb(202,223,235) 2px", fontSize: 20+'px', marginTop: 20+'px'}}>My services are also available on Fiverr!</p>
+      <p style={{textDecoration: "overline rgb(202,223,235) 2px", fontSize: 20+'px', marginTop: 50+'px'}}>My services are also available on Fiverr!</p>
+      <SingleService style={{margin: "40px auto 0 auto"}}>
+        <img src="myAvatar.png" alt="My Avatar" />
+        <a href="https://www.fiverr.com/statkevskiy" target="_blank" rel="noopener noreferrer">
+          <img style={{position: 'relative', top: '-70px', left: '125px', width: '75px'}} src="fiverr.png" alt="Fiverr" />
+        </a>
+      </SingleService>
     </ServicesContainer>
   );
 };
