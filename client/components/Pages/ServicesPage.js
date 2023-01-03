@@ -30,7 +30,7 @@ export const ServicesPage = (props) => {
               Personal Website
             </OverlayTitle>
             <OverlayDesc>
-              I will construct a static personal website for you!
+              Construction of a static personal website for you!
             </OverlayDesc>
             <OverlayPrice>
               {">$99"}
@@ -44,7 +44,7 @@ export const ServicesPage = (props) => {
               Mobile Application
             </OverlayTitle>
             <OverlayDesc>
-              I will construct a static personal website for you!
+              Building a mobile app that fits your needs!
             </OverlayDesc>
             <OverlayPrice>
               {">$149"}
@@ -58,7 +58,7 @@ export const ServicesPage = (props) => {
               E-Commerce Website
             </OverlayTitle>
             <OverlayDesc>
-              I will construct a static personal website for you!
+              Development of an e-commerce website for you!
             </OverlayDesc>
             <OverlayPrice>
               {">$199"}
@@ -66,6 +66,7 @@ export const ServicesPage = (props) => {
           </OverlayTurn>
         </SingleService>
       </Services>
+      <p style={{textDecoration: "overline rgb(202,223,235) 2px", fontSize: 20+'px', marginTop: 20+'px'}}>My services are also available on Fiverr!</p>
     </ServicesContainer>
   );
 };
