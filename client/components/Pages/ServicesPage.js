@@ -73,6 +73,7 @@ export const ServicesPage = (props) => {
           <img style={{position: 'relative', top: '-70px', left: '125px', width: '75px'}} src="fiverr.png" alt="Fiverr" />
         </a>
       </SingleService>
+      <p style={{textDecoration: "underline rgb(202,223,235) 2px", fontSize: 20+'px', marginTop: 50+'px'}}>Something you’d like isn’t listed here? Feel out <a href="/contact" target="_blank" rel="noopener noreferrer" style={{textDecoration: "none", color: "rgb(158, 174, 183)"}}>this short form</a> and I will get back to you asap!</p>
     </ServicesContainer>
   );
 };
