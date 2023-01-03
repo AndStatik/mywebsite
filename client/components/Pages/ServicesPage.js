@@ -30,7 +30,7 @@ export const ServicesPage = (props) => {
               Personal Website
             </OverlayTitle>
             <OverlayDesc>
-              I will construct a static personal website for you!
+              Construction of a static personal website for you!
             </OverlayDesc>
             <OverlayPrice>
               {">$99"}
@@ -44,7 +44,7 @@ export const ServicesPage = (props) => {
               Mobile Application
             </OverlayTitle>
             <OverlayDesc>
-              I will construct a static personal website for you!
+              Building a mobile app that fits your needs!
             </OverlayDesc>
             <OverlayPrice>
               {">$149"}
@@ -58,7 +58,7 @@ export const ServicesPage = (props) => {
               E-Commerce Website
             </OverlayTitle>
             <OverlayDesc>
-              I will construct a static personal website for you!
+              Development of an e-commerce website for you!
             </OverlayDesc>
             <OverlayPrice>
               {">$199"}
@@ -66,6 +66,14 @@ export const ServicesPage = (props) => {
           </OverlayTurn>
         </SingleService>
       </Services>
+      <p style={{textDecoration: "overline rgb(202,223,235) 2px", fontSize: 20+'px', marginTop: 50+'px'}}>My services are also available on Fiverr!</p>
+      <SingleService style={{margin: "40px auto 0 auto"}}>
+        <img src="myAvatar.png" alt="My Avatar" />
+        <a href="https://www.fiverr.com/statkevskiy" target="_blank" rel="noopener noreferrer">
+          <img style={{position: 'relative', top: '-70px', left: '125px', width: '75px'}} src="fiverr.png" alt="Fiverr" />
+        </a>
+      </SingleService>
+      <p style={{textDecoration: "underline rgb(202,223,235) 2px", fontSize: 20+'px', marginTop: 50+'px'}}>Something you’d like isn’t listed here? Feel out <a href="/contact" target="_blank" rel="noopener noreferrer" style={{textDecoration: "none", color: "rgb(158, 174, 183)"}}>this short form</a> and I will get back to you asap!</p>
     </ServicesContainer>
   );
 };
