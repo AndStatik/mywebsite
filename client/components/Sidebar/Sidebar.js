@@ -147,7 +147,7 @@ const linksArray = [
     label: "Projects",
     icon: <ImLab />,
     to: "/projects",
-    notification: 3,
+    notification: 0,
   },
   {
     label: "About Me",
@@ -159,7 +159,7 @@ const linksArray = [
     label: "Contact Me",
     icon: <AiOutlineMail />,
     to: "/contact",
-    notification: 1,
+    notification: 0,
   },
 ];
 
