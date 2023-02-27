@@ -5,6 +5,8 @@ import HomePage from './components/Pages/HomePage';
 import ProjectsPage from './components/Pages/ProjectsPage';
 import ContactMePage from './components/Pages/ContactMePage';
 import AboutMePage from './components/Pages/AboutMePage';
+import BlogPage from './components/Pages/BlogPage';
+import ServicesPage from './components/Pages/ServicesPage';
 
 const Routes = () => {
   return (
@@ -13,6 +15,8 @@ const Routes = () => {
       <Route exact path="/projects" component={ProjectsPage} />
       <Route exact path="/about" component={AboutMePage} />
       <Route exact path="/contact" component={ContactMePage} />
+      <Route exact path="/blog" component={BlogPage} />
+      <Route exact path="/services" component={ServicesPage} />
 
       <Redirect to="/" />
     </Switch>

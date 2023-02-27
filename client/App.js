@@ -22,12 +22,20 @@ const App = () => {
           <link rel="stylesheet" type="text/css" href="style.css" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Satisfy&display=swap" rel="stylesheet" /> 
+          <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Satisfy&display=swap"
+            rel="stylesheet"
+          />
         </Helmet>
         <>
-          <Layout>
-            <Routes />
-          </Layout>
+          <div className="loader">
+            <div></div>
+          </div>
+          <div className="content">
+            <Layout>
+              <Routes />
+            </Layout>
+          </div>
         </>
         {/* <Navbar /> */}
       </ThemeProvider>

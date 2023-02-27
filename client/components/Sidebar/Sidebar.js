@@ -64,7 +64,7 @@ const Sidebar = () => {
         </SSidebarButton>
       </>
       <SLogo isOpen={sidebarOpen}>
-      <SLink to={"/"}><img src="https://i.ibb.co/NWvWNB8/logo1.png" alt="logo" /></SLink>
+      <SLink to={"/"}><img src="https://i.ibb.co/B42ZYk7/logo1.png" alt="logo" /></SLink>
       </SLogo>
       <SSearch
         onClick={searchClickHandler}
@@ -105,12 +105,12 @@ const Sidebar = () => {
       ))}
       <STheme>
         <SLinkContainer key={"Dark Theme"} onClick={themeClickHandler}>
-          <SLink to="/" style={!sidebarOpen ? { width: "fit-content" } : {}}>
+          <div id="darkTheme" style={!sidebarOpen ? {} : {marginRight: 30+"px", paddingTop: 5+"px", paddingBottom: 5+"px"}}>
             <SLinkIcon>
               <MdOutlineNightlight />
             </SLinkIcon>
-            {sidebarOpen && <SLinkLabel><div id="darkTheme">Dark Theme</div></SLinkLabel>}
-          </SLink>
+            {sidebarOpen && <SLinkLabel>Dark Theme</SLinkLabel>}
+          </div>
         </SLinkContainer>
         {sidebarOpen && (
           <SThemeToggler
@@ -147,7 +147,7 @@ const linksArray = [
     label: "Projects",
     icon: <ImLab />,
     to: "/projects",
-    notification: 3,
+    notification: 0,
   },
   {
     label: "About Me",
@@ -159,7 +159,7 @@ const linksArray = [
     label: "Contact Me",
     icon: <AiOutlineMail />,
     to: "/contact",
-    notification: 1,
+    notification: 0,
   },
 ];
 

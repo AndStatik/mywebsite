@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { Carousel, DescriptionCarousel, Greet, Greet1, Greet2, Greet3, LabelCarousel, MyName, SingleCarousel, Welcome } from './homeStyles'
+import { Link } from 'react-router-dom'
+import { Banner, Carousel, DescriptionCarousel, Gradient, Greet, Greet1, Greet2, Greet3, LabelCarousel, MyName, SingleCarousel, Welcome } from './homeStyles'
 
 /**
  * COMPONENT
@@ -12,8 +13,29 @@ export const HomePage = props => {
       <video>
         <source src='https://streamable.com/e/s4uskx?autoplay=1&nocontrols=1' allow="autoplay" />
       </video>
+      <Welcome>
         <MyName>ANDREY STATKEVSKIY</MyName>
         <img src="https://i.ibb.co/YB5qzQ1/avatar.jpg" alt="avatar" border="0" />
+        <Banner>
+          <Gradient />
+        </Banner>
+        <Greet>Hi, I'm Andrey!</Greet>
+        <Greet1>Welcome to my website! I build websites and mobile applications of any purpose! I am responsible for everything, starting from drafting and design, and ending with deployment and hosting! If you have a dream project, then I could help you bridge it to reality!</Greet1>
+        <Greet2>Hey there!</Greet2>
+        <Greet3>Check it out!</Greet3>
+      </Welcome>
+      <br />
+      <Carousel>
+        {carouselArray.map(({ image, label, description, to }) => (
+          <Link to={to} key={label}> 
+            <SingleCarousel className='singleCarousel'>
+              <img src={image} alt={label} border="0" />
+              <LabelCarousel>{label}</LabelCarousel>
+              <DescriptionCarousel>{description}</DescriptionCarousel>
+            </SingleCarousel>
+            </Link>
+        ))}
+      </Carousel>
     </div>
   )
 }
